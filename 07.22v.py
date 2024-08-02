@@ -25,3 +25,29 @@ print('-------------------------------------------')
 tuple() 
 t4 = ()
 print(type(t4))
+print('-----------------------------------------')
+#Exercícios
+#Crie duas tuplas chamadas tupla1 e tupla2 com os elementos ('a', 'b', 'c') e ('d', 'e', 'f') respectivamente.
+# Concatene tupla1 e tupla2 e imprima o resultado.
+#Crie uma tupla com um único elemento 'g' e imprima o tipo dela para confirmar que é uma tupla.
+#Converta a string 'python' em uma tupla e imprima o resultado.
+#Crie uma lista lista_exemplo com os elementos ['x', 'y', 'z'] e converta essa lista em uma tupla. Imprima a tupla resultante.
+#Acesse e imprima o segundo elemento da tupla convertida.
+#Faça um slice da tupla convertida para pegar os dois últimos elementos e imprima o resultado.
+#Crie uma tupla vazia e imprima o tipo dela para confirmar que é uma tupla.
+
+tupla1 = ('a','b','c')
+tupla2 = ('d', 'e','f')
+
+tupla_conectada = tupla1 + tupla2
+print(tupla_conectada)
+tupla_de_1_elemento = ('g',)#sem virgua é uma str, com virgula tuple
+print(type(tupla_de_1_elemento))
+tupla_string = 'Python'
+print(tuple(tupla_string))
+lista_exemplo = ['x','y','z']
+print(tuple(lista_exemplo))
+print(tuple(lista_exemplo[1]))
+print(tuple(lista_exemplo[-2:]))
+tupla_vazia = ()
+print(type(tupla_vazia))

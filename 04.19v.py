@@ -15,4 +15,27 @@ print('marcelo' + ' ' + 'mota')# concatena a str
 print(' '.join(['marcelo','mota']))# é usado pra concatenar uma lista de str com o que for adicionado ou informado dentro do espaço
 print(len(nome))#retorna o comprimento da str com os espaços somados incluidos
 
+print('------------------------------------------')
 
+#Exercícios:
+#Crie uma variável chamada frase e atribua a ela a string: "aprendendo python é divertido".
+frase = 'Aprendendo python é divertido'
+print(frase)
+print('-------------------------------------------')
+#Utilize os métodos de string para realizar as seguintes operações:
+#Imprima a string toda em maiúsculas.
+#Imprima a string com a primeira letra em maiúscula.
+#Imprima a string com todas as primeiras letras de cada palavra em maiúsculas.
+#Substitua todas as ocorrências da letra "e" por "E".
+#Divida a string em uma lista de palavras, utilizando o espaço como delimitador.
+#Concatene as palavras "Python" e "é" com a palavra "fantástico" usando o operador + e imprima o resultado.
+#Use o método join para unir as palavras ["Python", "é", "fantástico"] com um espaço entre elas e imprima o resultado.
+#Imprima o comprimento da string frase.
+
+print(frase.upper())
+print(frase.title())
+print(frase.replace('e', 'E'))
+print(frase.split(' '))
+print('Python ' + 'é' + ' fantástico')
+print(' '.join(['Python', 'é', 'fantástico']))
+print(len(frase))
