@@ -55,4 +55,25 @@ print(add.__code__.co_argcount)# mostra quandos argumentosna função que nesse 
 print(add.__code__.co_code)#gera os bytecode são as esturções de nivel mas baixo execultado pelo hawdware do computador
 print(add.__code__.co_name)#mostra o nnome da funcão
 print(add.__code__.co_varnames)# mostra os nome dos valores das variaveis internas das funções
-print(dis.dis(add))
+dis.dis(add)
+print('---------------------------------------------------------\n')
+
+def add(a, b):
+    'Soma a com b'
+    return a + b
+
+# print(add)
+# print(add.__doc__)
+# help(add)
+
+def calc(op, a, b): # função de calculadore que ja tem como padrão operacções com 2 parametros correto
+    return op(a , b)
+
+print(calc(add, 2, 3))
+
+
+def mul(a, b):
+    return a * b
+
+print(calc(mul,2, 3))
+

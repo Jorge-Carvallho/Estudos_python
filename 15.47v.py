@@ -23,7 +23,7 @@ print(re.findall('[\w]','Henrique Bastos'))# codigo que representa a ate z, 0 at
 # # o \w acima não precisa esta dentro de uma classe para funcionar, exemplo
 print(re.findall('\w', 'Henrique Bastos')) # mesma forma da de cima 
 
-# # #ESPECIAIS SEQUENCIAS
+# # #ESPECIAIS SEQUÊNCIAS
 # # \d == [0-9] class de 0 ate 9
 # # \D == [^0-9] classe negando caracretes de 0 ate 9
 # # \s == [\t\n\r\f\v] clase de controles
