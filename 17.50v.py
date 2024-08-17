@@ -59,7 +59,7 @@ text = 'attr1="value1" attr2="value2"'
 text1 = 'attr3="" attr4=""'
 resultado9 = re.findall(r'".*?"', text1)
 print(resultado9)
-print('-----------------------------------------------------------------------')
+print('-----------------------------------8------------------------------------')
 
 #Mactch e search object --> retorna métodos group, start, end, span
 pattern = '98765'
@@ -69,5 +69,36 @@ print(result_pattern.group())# retorna o grupo do que foi feito match
 print(result_pattern.start())# retorna o primeiro indice caracter encontrado match
 print(result_pattern.end()) # retorna o ultimo indice cararcter encontado match
 print(result_pattern.span())# retona o indice inicial e final em uma tupla
-# 8:34\50
 print(re.match(r'\s+', pattern))# nessa expressão \s busca se a algum espaco em branco e o --> + <-- se a uma ou mas ocorrencias
+print('-----------------------------------9---------------------------------------')
+
+
+# Grupo de captura
+html = '<input type="text" id="id_cpf" name="cpf">' 
+pattern = r'<(.+?) type="(.+?)" id="(.+?)" name="(.+?)"'#retorne tudo que estiver  dentro de <  onde qualquer caracter =. um ou mas vezes=+ com o minimo de retorno possiveis dos valores dos atributos =? 
+resultado10 = re.match(pattern, html)# a expressão regular acima tenta extrair valores dos atributos da tag input(type,d,name)
+print( resultado10)
+print(resultado10.groups())# método groups() returna uma tupla com todos os grupos de captura  para buscar os valores selecionados dentro da tag
+print(resultado10.lastindex)# antes de buscar o group() especifico, o lastindex me retorna a quantidade de indice que tem em determinado grupo( retorna 4 neste caso, 0= tag total do input, 1= text, 2= id_cpf, 3= cpf ), em seguida posso buscar o qual group(indice) exemplos abaixo:
+print(resultado10.group(0))# faz  a busca por determinado group(indice) 
+print(resultado10.group(2,1,3))
+print(resultado10.group(3,2,1))
+print('-----------------------------------10----------------------------------')
+
+# Estabelecendo padrões em ordem especificas, tenhos 2 inputs html com  a ordens dos atibutos diferentes 
+# usarei um agrupador de não captura pra ajudar a estruturar um padrão de retorno com uma ordem especifica
+html1 = '<input type="text" id="id_cpf" name="cpf">'
+html2 = '<input id="id_cpf" name="cpf" type="text">'
+resultado11 = pattern1 = r'<(.+?) type="(.+?)" id="(.+?)" name="(.+?)"'# '<(.+?)' captura tudo dentro do simbolo < > incluindo a tag input, (.+?)captura os valores dos atributos type, id, name entre as aspas duplas de forma nao gulosa com a --> ? <-- informando o mínimo possivel ou seje ( o sinal de + indica um oumas vezes e a ? retorna no minimo um )
+# -------grupo  1---------- grupo 2----grupo 3------grupo 4, são quem define a orden atraves de indice ambos possuem os mesmos indices, ----> mesmo que a string tenha ordens diferentes a orden definida no pattern é respeitada.
+pattern2 = r'<(.+?) (?:(?:type="(.+?)"|id="(.+?)"|name="(.+?)") ?)*'# estruturar pattern rpa retornar type,id, name vairas vezes, com o (?:)indica a abertura de um grupo nao captura, pipe indica ou type, ou id, ou name,novamente tenho outro grupo de não captura, por fim o * indica que o grupo de fora acontecerar 0 ou mais vezesd eforma galanciosa
+resultado12 = re.match(pattern2, html1)
+
+print(resultado12)
+print(resultado12.groups())
+
+resultado13 = re.match(pattern2,html2)
+print(resultado13.groups())
+# resultado a ordens dos grupos foi a mesma mesmo estando os inputs de forma trocadas. pattern quem define o padrão ao imprimir
+print(resultado12.group(3,1,2))
+print(resultado13.group(3,1,2))
