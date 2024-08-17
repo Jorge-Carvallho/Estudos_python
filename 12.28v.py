@@ -34,7 +34,7 @@ def filtro(**lookups):# lookups é nome valor de convenção
 print(filtro(name__stars_with= "HEN", age__lt=30,
             city__endswith= 'rói'))
 
-print('-----------------------------------')
+print('-----------------aqui------------------')
 # Atribuição 
 def f (*args, **kwargs):#Função de agrupas os valores nomeados e não nomeados, os nomeados passei de ula tupla para uma dict
     print(args, kwargs)
@@ -76,4 +76,37 @@ def mul(a, b):
     return a * b
 
 print(calc(mul,2, 3))
+print('------------------------------------------------1------------------------------------')
 
+# Exercícios
+
+# Exercício 1: Função com Parâmetros
+# Crie uma função chamada descricao que aceite três parâmetros: nome, idade e cidade. A função deve retornar uma string no formato "Nome: [nome], Idade: [idade], Cidade: [cidade]". Teste a função com diferentes valores para cada parâmetro.
+
+def descricao(nome,idade,cidade):
+    return f'Nome: {nome} Idade: {idade} Cidade: {cidade}'
+
+print(descricao('Jorge', '34 anos', 'Salvador,Bahia'))
+print(descricao('Lais','33 anos', 'Salvador,Bahia'))
+print('------------------------------------------------2------------------------------------')
+
+# Exercício 2: Função com *args
+# Escreva uma função chamada concatena que receba uma quantidade variável de strings usando *args e retorne uma única string que é a concatenação de todas as strings fornecidas. Teste a função com diferentes números de argumentos.
+
+def concatena(*args):
+    resultado = ''.join(args)
+    return resultado.upper()
+
+print(concatena('Olá ', ' ', 'Mundo'))
+print(concatena('Python', ' ', 'é ', 'uma linguagem', ' ', 'incrivel'))
+
+print('------------------------------------------------3-------------------------------------')
+# Exercício 3: Função com **kwargs
+# Crie uma função chamada informacoes que aceite um número variável de parâmetros nomeados usando **kwargs. A função deve exibir cada chave e valor do dicionário resultante. Teste a função com diferentes pares chave-valor.
+
+def informacoes(**kwargs):
+    for chave, valor in kwargs.items():
+        print(f'{chave}: {valor}')
+        
+        
+informacoes(nome= 'Ana', idade=30, cidade='Rio de Janeiro')
