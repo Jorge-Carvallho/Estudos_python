@@ -116,3 +116,125 @@ for match in ocorencia:
 # resultado = ['c', 'f','g']
 # #retorna o caracter finald e cada linha percorrendo as linhas do \n
 
+print('----------------------------------1------------------------------------')
+#  Exercícios Expressões Regulares
+
+# Exercício 1. Verificar Início da String
+# Escreva uma função que verifique se a frase começa com o padrão "começou". A função deve receber uma string e retornar uma mensagem indicando se a string começa com o padrão ou não.
+# def verifica_inicio(s):
+#     padrao = 'comecou'
+   
+#     if re.match(padrao,s):
+#         print('frase comecou no padrão')
+#     else:
+#       print('Nao comecou no padrão')   # verificar se alguma frese ou a string está comecando com a palavra
+
+# verifica_inicio('comecou')
+# verifica_inicio('comecou agora')
+# verifica_inicio('agora comecou')
+# verifica_inicio('Comecando')
+
+print('----------------------------------------------2-----------------------------------------')
+# Exercício 2. Buscar Padrão em Qualquer Parte da Frase
+# Escreva uma função que verifique se o padrão "abc" aparece em qualquer parte da frase. A função deve retornar uma mensagem informando se o padrão foi encontrado ou não.
+def verificar_padrao(frase):
+    padrao1 = 'apareceu'
+    if re.search(padrao1,frase):
+        print('A palavra apareceu sim em algum local')
+    else:
+        print('Ainda não apareceu')
+    
+
+verificar_padrao('A palavra ainda não apare.. mas vai aparecer')
+verificar_padrao('A palavra quase aparec... mas ainda não')
+verificar_padrao('Agora sim a palavra apareceu apareceu rsrsrs')
+verificar_padrao('olhar, ir, palavra, aparecer, apareceu')
+
+print('------------------------------------------------3----------------------------------------')
+
+# Exercício 3. Encontrar Todas as Ocorrências
+# Crie uma função que receba uma frase e encontre todas as ocorrências do padrão "python". A função deve retornar uma lista com todas as ocorrências encontradas.
+def ocorrencia(s): 
+    aparicoes = []
+    padrao2 = 'python'
+    resultados = re.findall(padrao2, s, re.IGNORECASE)# o IGNORECASE ele ignora as palavras maiúsculas ou minúsculas
+    if resultados:
+        aparicoes.extend(resultados)
+        
+    else:
+        print('Não ouve aparicoes da palavra')
+        
+    return aparicoes
+        
+print(ocorrencia('Pensei de ter vista a palavra Pyth..'))
+print(ocorrencia('Mais uma vez pensei em ter visto a palavra python, mas não era a palavra'))
+print(ocorrencia('Dentro de Python, tem varias coisas, python é python, e quem domina python é fera'))
+
+print('------------------------------------------4------------------------------------------------')
+
+
+# Exercício 4. Posição das Ocorrências
+# Crie uma função que retorne as posições onde o padrão "abc" aparece na frase. A função deve retornar uma lista de tuplas com as posições de início e fim de cada ocorrência.
+def posicoes(s):
+    aparicoes_1 = []
+    padrao3 = 'abc'
+    
+    for match in re.finditer(padrao3,s,re.IGNORECASE):
+        inicio = match.start()
+        final = match.end()
+        grupo = match.group()
+        aparicoes_1.append((inicio,final,grupo))
+        
+    return aparicoes_1 
+    
+print(posicoes('Dentro de abc, tem muitos, abc nas palaabcvas'))
+print(posicoes('abc no incio abc no fim, com muitos abcs, o abc e abcis, abc'))
+
+print('---------------------------------------------------5-------------------------------------')
+
+# Exercício 5. Verificar Início e Fim da Frase
+# Escreva uma função que verifique se a frase começa com o padrão "abc" e termina com o padrão "xyz". A função deve retornar um dicionário indicando se a frase começa ou termina com os padrões.
+
+def verificar(frase1):
+
+    padrao_inicial = 'abc'
+    padrao_final = 'xyz'
+
+    aparicoes_2 = {
+        
+        'comeca_com_abc': frase1.startswith(padrao_inicial),
+        'termina_com_xyz': frase1.endswith(padrao_inicial)
+    }
+    
+    return aparicoes_2
+    
+    
+print(verificar('abc algo xyz'))
+print(verificar('abc algo'))
+print(verificar('algo xyz'))
+print(verificar('algo algo'))
+print(verificar('xyz abc'))
+
+print('')
+print('-------------------------------OUtra forma-------------------------------- ')
+print('')
+
+def verificar_ancoras(frase):
+    padrao_inicial = 'abc'
+    padrao_fim = 'xyz'
+
+    comeca_com_padrao = bool(re.search(f'^{padrao_inicial}', frase))
+    termina_com_padrao = bool(re.search(f'{padrao_fim}$', frase))
+
+    return {
+        'começa_com_padrao':comeca_com_padrao,
+        'termina_com_padrao':termina_com_padrao
+        
+    }
+
+
+print(verificar('abc algo xyz'))
+print(verificar('abc algo'))
+print(verificar('algo xyz'))
+print(verificar('algo algo'))
+print(verificar('xyz abc'))
