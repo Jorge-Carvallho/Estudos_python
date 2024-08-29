@@ -238,8 +238,15 @@ print('--------------------------------------6----------------------------------
 # autor
 # numero_paginas
 # E os seguintes métodos:
+# descricão que imprime a descrição do livro no formato: "Titulo: {titulo}, Autor: {autor}, Páginas: {numero_paginas}".
+# Crie uma instância da classe Livro com os valores:
+# titulo: "Python para Iniciantes"
+# autor: "João Silva"
+# numero_paginas: 320
+# Use o método descricao para imprimir a descrição do livro.
 
-# descricao que imprime a descrição do livro no formato: "Titulo: {titulo}, Autor: {autor}, Páginas: {numero_paginas}".
+
+
 class Livro:
     def __init__(self,titulo, autor,numero_de_paginas):
         self.titulo = titulo
@@ -252,21 +259,13 @@ class Livro:
 
 
 
-livro1 = Livro('Python para iniciantes ','João', 320 )
-livro1.descricao
+livro1 = Livro('Python para iniciantes','João Silva', 320 )
+livro1.descricao()
+livro2 = Livro('Como aprender','Enesto Simôes', 477)
+livro2.descricao()
+print('-----------------------------------------7------------------------------------------------')
 
-
-
-
-# Crie uma instância da classe Livro com os valores:
-# titulo: "Python para Iniciantes"
-# autor: "João Silva"
-# numero_paginas: 350
-# Use o método descricao para imprimir a descrição do livro.
-# python
-# Copiar código
-# # Seu código aqui
-# Exercício 2: Classe Pessoa
+# Exercício 7: Classe Pessoa
 # Tarefa: Crie uma classe chamada Pessoa com os seguintes atributos:
 
 # nome
@@ -284,10 +283,29 @@ livro1.descricao
 # cidade: "São Paulo"
 # Use o método cumprimentar.
 # Mude a cidade da Pessoa para "Rio de Janeiro" e use o método mudar_cidade para exibir a nova cidade.
-# python
-# Copiar código
-# # Seu código aqui
-# Exercício 3: Classe ContaCorrente
+
+class Pessoa:
+    def __init__(self,nome,idade,cidade):
+        self.nome = nome
+        self.idade = idade
+        self.cidade = cidade
+
+    def cumprimentar(self):
+        print(f'Olá, meu nome é {self.nome} e tenho {self.idade} anos! ')
+        
+    def mudar_cidade(self,cidade):
+        self.cidade = cidade
+        print(f'Agora moro na cidade {self.cidade}')
+        
+        
+        
+pessoa1 = Pessoa('Maria', 28, 'São paulo')
+pessoa1.cumprimentar()
+pessoa1.mudar_cidade('Rio de Janeiro')
+
+print('------------------------------------8---------------------------------------------')
+
+# Exercício 8: Classe ContaCorrente
 # Tarefa: Crie uma classe chamada ContaCorrente com os seguintes atributos:
 
 # titular
@@ -297,18 +315,44 @@ livro1.descricao
 # depositar que aumenta o saldo da conta e imprime "Depósito de {valor} realizado. Saldo atual: {saldo}".
 # sacar que diminui o saldo da conta se houver saldo suficiente e imprime "Saque de {valor} realizado. Saldo atual: {saldo}". Se não houver saldo suficiente, imprime "Saldo insuficiente!".
 # exibir_saldo que imprime o saldo atual.
-# Passos:
-
 # Crie uma instância de ContaCorrente com os valores:
 # titular: "Carlos"
 # saldo: 1000
 # Deposite 500 na conta.
 # Saque 300 e depois tente sacar 1500 (deve mostrar "Saldo insuficiente!").
 # Exiba o saldo final da conta.
-# python
-# Copiar código
-# # Seu código aqui
-# Exercício 4: Classe Cachorro
+
+
+        
+class ContaCorrente:
+    def __init__(self,titular,saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        
+
+    def depositar(self,valor):
+        self.saldo += valor
+        print(f'Depósito de valor {valor}. Saldo atual: {self.saldo}. ')
+        
+    def sacar(self,valor):
+        if self.saldo >= valor:
+            self.saldo -= valor
+        else:
+            print(f'Saldo Insufucuente')
+        
+        
+    def exibir_saldo(self):
+        print(f'Meu saldo atual é {self.saldo}')
+
+conta11 = ContaCorrente('Carlos', 1000)
+conta11.depositar(500)
+conta11.sacar(300)
+conta11.sacar(1500)
+conta11.exibir_saldo()
+print('-----------------------------------------9---------------------------------------------------')
+
+
+# Exercício 9: Classe Cachorro
 # Tarefa: Crie uma classe chamada Cachorro com os seguintes atributos:
 
 # nome
@@ -325,10 +369,26 @@ livro1.descricao
 # raca: "Labrador"
 # idade: 3
 # Use o método latir e o método descrição para descrever o cachorro.
-# python
-# Copiar código
-# # Seu código aqui
-# Exercício 5: Classe Aluno
+
+class Cachorro:
+    def __init__(self,nome,raca,idade):
+        self.nome = nome
+        self.raca = raca
+        self.idade = idade
+
+    def latir(self):
+        print('Auuu auu!')
+
+    def descricao(self):
+        print(f'Meu nome é {self.nome}, sou da raça {self.raca}, e tenho {self.idade} anos.')
+
+cachorro1 = Cachorro('Bruce', 'Amor', 4)    
+cachorro1.latir()
+cachorro1.descricao()
+
+print('----------------------------------------10------------------------------------------')
+
+# Exercício 10: Classe Aluno
 # Tarefa: Crie uma classe chamada Aluno com os seguintes atributos:
 
 # nome
@@ -347,3 +407,37 @@ livro1.descricao
 # Adicione três notas: 8.0, 6.5, 7.5.
 # Calcule e exiba a média das notas.
 # Verifique a situação do aluno (Aprovado ou Reprovado).
+
+class Aluno:
+    def __init__(self, nome, matricula):
+        self.nome = nome
+        self.matricula = matricula
+        self.notas = []
+
+    def adicionar_notas(self, nota):
+        self.notas.append(nota)
+
+    def media(self):
+        if len(self.notas) == 0:
+            return 0
+        return sum(self.notas) / len(self.notas)
+    
+    def situacao(self):
+        media_aluno = self.media()
+        if media_aluno >= 7:
+            print('Aprovado')
+        else:
+            ('Reprovado')
+            
+    def descricao(self):
+        print(f'Nome: {self.nome}, Matricula: {self.matricula}')
+
+aluno1 = Aluno('Ana', 12345)
+aluno1.adicionar_notas(8.0)
+aluno1.adicionar_notas(6.5)
+aluno1.adicionar_notas(7.5)
+media_notas = aluno1.media()
+
+aluno1.descricao()
+print(f'Média das notas: {media_notas:.2f}')
+aluno1.situacao()
