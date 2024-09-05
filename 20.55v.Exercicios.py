@@ -220,10 +220,7 @@ jogo1 = Jogo('BahiaxVitoria',' futbol', 2015)
 jogo1.descrição()
 jogo1.atraso()
 
-
-
-
-
+print('-----------------------------------8--------------------------------------------')
 # Exercício 8: Classe Telefone
 # Crie uma classe chamada Telefone com os seguintes atributos:
 
@@ -231,6 +228,26 @@ jogo1.atraso()
 # numero
 # fabricante
 # Inclua um método alterar_numero que atualiza o número de telefone e um método informacoes que imprime "Modelo: {modelo}, Número: {numero}, Fabricante: {fabricante}".
+class Telefone:
+    def __init__(self,modelo,numero,fabricante):
+        self.modelo = modelo
+        self.numero = numero
+        self.fabricante = fabricante
+        
+    def alterar_numero(self,atualizar_numero):
+        self.numero = atualizar_numero
+
+    def informacoes(self):
+        print(f'Modelo: {self.modelo}, Número: {self.numero}, Fabricante: {self.fabricante}')
+
+
+numero1 = Telefone('Azus', 98877665,'Vivo')
+numero1.alterar_numero(1223334455667)
+numero1.informacoes()
+
+print('---------------------------------------9-----------------------------------')
+
+
 
 # Exercício 9: Classe Tarefa
 # Crie uma classe chamada Tarefa com os seguintes atributos:
@@ -239,6 +256,28 @@ jogo1.atraso()
 # concluida (booleano)
 # Inclua métodos marcar_concluida para definir a tarefa como concluída e status que imprime "Descrição: {descricao}, Concluída: {concluida}".
 
+class Tarefa:
+    def __init__(self,descricao, concluida=False):
+        self.descricao = descricao
+        self.concluida = concluida
+
+    def marcar_concluida(self):
+        self.concluida = True
+        
+    
+    def status(self):
+        print(f'Descrição: {self.descricao}, Concluída: {self.concluida}')
+        
+        
+        
+trabalho1 = Tarefa('Relatorio', False)
+trabalho1.status()
+
+trabalho2 = Tarefa('relatorio', False)
+trabalho2.marcar_concluida()
+trabalho2.status()
+print('------------------------------------------------10-------------------------------')
+
 # Exercício 10: Classe Agenda
 # Crie uma classe chamada Agenda com o seguinte atributo:
 
@@ -246,3 +285,40 @@ jogo1.atraso()
 # Inclua métodos adicionar_contato para adicionar um novo contato e listar_contatos para imprimir todos os contatos da agenda.
 
 # Esses exercícios foram criados para cobrir uma variedade de situações e funcionalidades diferentes, ajudando você a praticar e entender melhor como trabalhar com classes em Python. Boa sorte e divirta-se praticando!
+
+# class Agenda:
+#     def __init__(self,contatos=None):
+#         if contatos is None:
+#             self.contatos = []
+#         else:
+#             self.contatos = contatos
+#     def adicionar_contatos(self, nome, telefone):
+#         novoContato = (nome , telefone)
+#         self.contatos.append(novoContato)
+        
+#     def listarContatos(self):
+#         for nome, telefone in self.contatos:
+#             print(f'Nome: {nome}, Telefone: {telefone}' )
+                  
+# serviço1 = Agenda()
+# serviço1.adicionar_contatos('jorge', 32404111)
+# serviço1.adicionar_contatos('Lais', 33441213)
+# serviço1.listarContatos()
+
+print('----------------------------------------------------------------------------------------')
+
+class Agenda:
+    def __init__(self):
+        self.contatos = []
+    def adicionar_contatos(self,nome,telefone):
+        novo_contato = (nome, telefone)
+        self.contatos.append(novo_contato)
+
+    def listar_contatos(self):
+        for contato in self.contatos:
+            print(f'Nome: {contato[0]}  Telefone: {contato[1]}')
+
+contato1 = Agenda()
+contato1.adicionar_contatos('Jorge', 32121232)
+contato1.adicionar_contatos('lais', 53242415)
+contato1.listar_contatos()
