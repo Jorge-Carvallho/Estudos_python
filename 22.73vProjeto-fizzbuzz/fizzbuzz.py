@@ -53,6 +53,7 @@ if __name__ == '__main__':
     assert robot(45) == 'fizzbuzz'
     
     
+    
 """
     1. Função multiple_of
 Primeiro, você criou uma função multiple_of usando um lambda. Ela verifica se um número é múltiplo de outro. A função é simples:
