@@ -113,3 +113,75 @@ if 'Pais' not in Dados:
     Dados['Pais'] = 'Brasil'
     print(Dados)
     
+print('----------------------------------------------------------------------------')
+
+# Exercício 1: Adicionando e Alterando Valores
+# Crie um dicionário chamado veiculo com as seguintes chaves e valores:
+# Marca: 'Toyota'
+# Modelo: 'Corolla'
+# Ano: 2015
+# Acesse e imprima o valor associado à chave 'Modelo'.
+# Adicione uma nova chave chamada 'Cor' com o valor 'Prata'.
+veiculos = {'Marca':'Toyota','Modelo': 'Corolla', 'Ano': 2015}
+print(veiculos['Modelo'])
+veiculos['Cor'] = 'prata'
+# Altere o valor da chave 'Ano' para 2020.
+veiculos['Ano'] = 2020
+print(veiculos)
+# Verifique se a chave 'Preço' existe no dicionário e adicione essa chave com o valor 80000 se ela não existir.
+if 'Preço' not in veiculos:
+    veiculos['Preço'] = 80000
+print(veiculos)
+print('--------------------------------------')
+# Exercício 2: Removendo Elementos
+# Crie um dicionário chamado livro com as seguintes chaves e valores:
+# Título: 'O Senhor dos Anéis'
+# Autor: 'J.R.R. Tolkien'
+# Ano: 1954
+# Gênero: 'Fantasia'
+livro = {'Título' : 'O senhor dos Anéis', 'Autor' : 'J.R.R Tolkin', 'Ano' : 1954, 'Gênero' : 'Fantasia'}
+print(livro)
+# Use o método pop() para remover a chave 'Gênero' e armazene o valor removido em uma variável chamada genero_removido.
+genero_removido = livro.pop('Gênero')
+print(genero_removido)
+# Verifique se a chave 'Título' ainda está no dicionário.
+print('Título' in livro)
+print(livro.get('Título'))
+# Adicione uma nova chave chamada 'Tradução' com o valor 'Sim'.
+livro['Tradução'] = 'Sim'
+print(livro)
+
+# Exercício 3: Iteração com Dicionários
+# Crie um dicionário chamado frutas com os seguintes pares chave-valor:
+# Maçã: 5
+# Banana: 8
+# Uva: 12
+frutas = {'Maçã': 5, 'Banana': 8, 'Uva': 12}
+# Use um loop for para imprimir todas as chaves e seus valores.
+# Use o método items() para acessar os pares chave-valor.
+for chave, valor in frutas.items():
+    print(f'chave {chave}, valor {valor}')
+# Converta os pares chave-valor em uma lista de tuplas e imprima o resultado.
+pares = frutas.items()
+print(list(pares))
+
+
+# Exercício 4: Métodos de Dicionário
+# Crie um dicionário chamado aluno com as seguintes chaves e valores:
+# Nome: 'Maria'
+# Idade: 22
+# Curso: 'Engenharia'
+aluno = {'Nome': 'Maria', 'Idade': 22, 'Curso': 'Engenharia'}
+# Verifique se a chave 'Curso' existe no dicionário. Se sim, imprima "Chave Curso encontrada".
+# print('Curso' in aluno)
+# print(aluno.get('Curso'))
+if 'Curso' in aluno:
+    print('Chave do curso encontrada')
+# Adicione uma chave 'Matrícula' com o valor 12345.
+aluno['Matrícula'] = 12345
+print(aluno)
+print(aluno.keys())
+print(aluno.values())
+# Acesse todas as chaves e imprima usando o método keys().
+# Acesse todos os valores e imprima usando o método values().
+
