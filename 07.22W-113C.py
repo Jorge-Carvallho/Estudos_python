@@ -49,5 +49,50 @@ lista_exemplo = ['x','y','z']
 print(tuple(lista_exemplo))
 print(tuple(lista_exemplo[1]))
 print(tuple(lista_exemplo[-2:]))
-tupla_vazia = ()
+tupla_vazia = () 
 print(type(tupla_vazia))
+print('-----------------------------------------------------------------------------')
+
+# Exercícios:
+# Concatenando tuplas:
+# Crie duas tuplas chamadas tupla1 e tupla2 com os elementos ('a', 'b', 'c') e ('d', 'e', 'f'), respectivamente.
+# Concatene as duas tuplas e imprima o resultado.
+tupla_1 = ('a', 'b', 'c')
+tupla_2 = ('d', 'e', 'f')
+print(tupla1 + tupla2)
+
+# Tupla com um único elemento:
+# Crie uma tupla com um único elemento 'g' e imprima o tipo dela para confirmar que é uma tupla.
+tupla_1_elemento = ('g',)
+print(type(tupla_1_elemento))
+print('--------------------------')
+
+# Convertendo string para tupla:
+# Converta a string 'python' em uma tupla e imprima o resultado.
+string = 'python'
+string_convertida = tuple(string)
+print(string)
+print(string_convertida)
+print('---------------------------')
+# Convertendo lista para tupla:
+# Crie uma lista lista_exemplo com os elementos ['x', 'y', 'z'] e converta essa lista em uma tupla.
+# Imprima a tupla resultante.
+lista_exemplo = ['x', 'y', 'z']
+lista_convertida = tuple(lista_exemplo)
+print(lista_exemplo)
+print(lista_convertida)
+# Acessando elementos em tuplas:
+# Acesse e imprima o segundo elemento da tupla convertida no exercício anterior.
+print(lista_convertida[1])
+print('-----------------------------------')
+
+# Slice de tupla:
+# Faça um slice da tupla convertida para pegar os dois últimos elementos e imprima o resultado.
+print(lista_convertida[-2:])
+print('------------------------------')
+
+
+# Tupla vazia:
+# Crie uma tupla vazia e imprima o tipo dela para confirmar que é uma tupla.
+tupla = ()
+print(type(tupla))
