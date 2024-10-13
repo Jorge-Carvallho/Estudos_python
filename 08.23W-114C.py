@@ -184,4 +184,124 @@ print(aluno.keys())
 print(aluno.values())
 # Acesse todas as chaves e imprima usando o método keys().
 # Acesse todos os valores e imprima usando o método values().
+print('-----------------------------------novos exercicios -----------------------------------')
 
+
+# Exercício 1: Atualização de Valores
+# Crie um dicionário chamado estoque com os seguintes produtos e quantidades:
+# Camiseta: 50
+# Calça: 30
+# Sapato: 20
+# Atualize a quantidade de "Calça" para 40.
+# Verifique se o produto "Chapéu" existe no dicionário e, se não existir, adicione-o com a quantidade de 15.
+Estoque = {
+    'Camisa': 50,
+    'Calça': 30,
+    'Sapato': 20
+}
+Estoque['Sapato']=40
+if 'Chapéu' not in Estoque:
+    Estoque['Chapéu']= 15
+print(Estoque)
+print('--------------------------------------------------------------\n')
+    
+# Exercício 2: Contagem e Acesso
+# Crie um dicionário chamado biblioteca que armazena títulos de livros e seus respectivos autores:
+
+# "1984" escrito por George Orwell
+# "Dom Casmurro" escrito por Machado de Assis
+# "O Senhor dos Anéis" escrito por J.R.R. Tolkien
+biblioteca ={
+    '1984': 'George Orwell',
+    'Dom Casmurro':'Machado de Assis',
+    'O Senhor dos Aneis': 'J.R.R TOlkien'
+}
+print(biblioteca)
+# Imprima o número total de livros na biblioteca.
+print(len(biblioteca))
+
+# Converta as chaves (títulos dos livros) em uma lista e imprima.
+titulos = list(biblioteca.keys())
+print(titulos)
+# Converta os valores (autores) em uma lista e imprima.
+autores = list(biblioteca.values())
+print(autores)
+print('--------------------------------\n')
+
+# Exercício 3: Iteração com Dicionários
+# Crie um dicionário chamado frutas_preco com os seguintes itens e preços:
+
+
+frutas_preco = {
+    'Banana': '2,50 por quilo',
+    'Maçã': '3,00 por quilo',
+    'Pera': '4,00 por quilo',
+    'Manga': '5,0 por quilo'   
+}
+# Use um loop para imprimir todas as frutas e seus respectivos preços.
+for frutas, preco in frutas_preco.items():
+    print(f'{frutas} R$:{preco}')
+# Converta os pares de chave-valor (fruta e preço) em uma lista de tuplas.
+frutas_tuplas = list(frutas_preco.items())
+print(frutas_tuplas)
+print(frutas_preco)
+print('-----------------------\n')
+
+
+# Exercício 4: Manipulação de Dicionário
+# Crie um dicionário chamado livro com as seguintes informações:
+
+livros ={
+    'Titulo': 'A Revolução dos Bichos',
+    'Autor': 'George Orwell',
+    'Ano': 1945
+}
+print(livros)
+# Atualize o valor da chave "Ano" para 1950.
+livros['Ano']= 1950
+# Verifique se a chave "Gênero" existe no dicionário. Se não existir, adicione-a com o valor "Ficção".
+if 'Gênero' not in livros:
+    livros['Gêreno']='Ficção'
+
+print(livros)
+print('---------------------------------------\n')
+
+
+# Exercício 5: Remoção de Elementos
+# Crie um dicionário chamado pessoa com as seguintes informações:
+# Nome: "Roberto"
+# Idade: 40
+# Profissão: "Engenheiro"
+
+pessoa = {
+    'Nome': 'Roberto',
+    'Idade': 40,
+    'Profissão': 'Engenheiro'
+}
+print(pessoa)
+# Remova a chave "Idade" usando um método adequado e armazene o valor removido em uma variável.
+idade_removida = pessoa.pop('Idade')
+print(pessoa)
+# Verifique se a chave "Profissão" ainda está presente no dicionário.
+print('Profissão' in pessoa)
+print('---------------------------------\n')
+
+# Exercício 6: Dicionários Aninhados
+# Crie um dicionário chamado empresa que armazena informações sobre departamentos e seus respectivos gerentes e números de funcionários:
+
+# Departamento de TI: Gerente "Paulo" e 10 funcionários
+# Departamento de RH: Gerente "Ana" e 5 funcionários
+# Departamento Financeiro: Gerente "Carlos" e 8 funcionários
+empresa = {
+    'TI':{'Gerente': 'Paulo', 'Funcionarios': 10},
+    'RH':{'Gerente': 'Ana', 'Funcionarios': 5},
+    'Financeiro':{'Gerente': 'Carlos', 'Funcionarios': 8 }
+}
+# Acesse o nome do gerente do departamento de TI.
+gerente_ti = empresa['TI']['Gerente']
+print(gerente_ti)
+
+# Atualize o número de funcionários do departamento de RH para 6.
+print(empresa)
+empresa['RH']['Funcionarios']= 6 
+print(empresa)
