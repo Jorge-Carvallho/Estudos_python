@@ -121,3 +121,101 @@ print(f'Resultado de {valor1} and {valor2} é {resultaddo_and_1}')
 print(f'Resultado de {valor1} and {valor1} é { resultaddo_and_2}')
 print(f'Resultado de {valor1} or {valor2} é {resultaddo_or_1}')
 print(f'Resultado de {valor2} or { valor2} é { resultaddo_and_1}')
+
+'''
+Revisão da aula  e exercícios -------------------------------------------------------------------------------------------------------------
+'''
+
+
+
+# Exercícios de Prática
+
+# Verifique se uma letra é vogal ou consoante. Se for vogal, imprima-a em maiúscula. Se for consoante, imprima "#".
+letra = 'a'
+if letra == letra.lower():
+    print(letra.upper())
+else:
+    print('#')
+print('-' * 50)
+
+
+# Verifique se um número é múltiplo de 3 e imprima "Múltiplo de 3" ou "Não é múltiplo de 3".
+numero = 9
+if numero % 3 == 0:
+    print('Múltiplo de 3')
+else:
+    print('Não é múltiplo de 3')
+print('-' * 50)
+
+# Verifique se uma string está vazia e imprima "Vazia" ou "Não está vazia".
+texto = 'Python'
+if texto in '':
+    print('Vazia')
+else:
+    print('Não esta vazia')
+
+# Receba um número e verifique se ele é positivo, negativo ou zero.
+numero = -10
+if numero <= 0:
+    print('Número negativo ou zero')
+else:
+   print('Número positivo')
+print('-' * 50)
+   
+# Verifique se uma senha contém pelo menos um caractere especial (ex: !, @, #) usando o módulo `re`.
+import re
+senha = 'Senha!123'
+if re.search(r'[!@#]', senha): #re.search retorna as ocorrência caso esteja em uma sequencia ex.('!@#') e para verificar uma a uma precisar esta dentro de [] como no exemplo
+    print('tem sim')
+else:
+    print('não tem')
+print('-'* 50)
+
+'''
+isinstance()
+A função isinstance() é usada para verificar se um objeto é uma instância de uma determinada classe ou tipo. Isso é útil para garantir que os dados que você está trabalhando são do tipo esperado.
+
+isinstance(objeto, tipo)
+objeto: O valor ou a variável que você deseja verificar.
+tipo: O tipo ou a classe que você está verificando. Você pode passar um único tipo ou uma tupla de tipos.
+Exemplo:
+x = 10
+print(isinstance(x, int))  # Saída: True (x é um inteiro)
+y = "Hello"
+print(isinstance(y, str))  # Saída: True (y é uma string)
+z = [1, 2, 3]
+print(isinstance(z, list))  # Saída: True (z é uma lista)
+
+# Verificando múltiplos tipos
+print(isinstance(x, (int, float)))  # Saída: True (x é int)
+print(isinstance(y, (int, float)))  # Saída: False (y não é int ou float)
+'''
+
+
+# Verifique se todos os elementos de uma lista são números e imprima "Todos são números" ou "Há elementos não numéricos".
+
+lista = [1, 2, 'abc', 4]
+if all(isinstance(item,(int,float)) for item in lista):
+    print('Todos são numéricos')
+else:
+    print('Há elementos não numéricos')
+
+# Verifique se um número é ímpar e imprima "Ímpar" ou "Não é ímpar".
+numero = 17
+# Escreva seu código aqui
+
+# Crie uma expressão lógica que avalie se pelo menos uma das variáveis booleanas `x` ou `y` é verdadeira.
+x = False
+y = True
+# Escreva seu código aqui
+
+# Peça para o usuário inserir três valores (um número, uma lista e uma string) e verifique se algum deles está vazio.
+numero = 5
+lista = []
+string = 'Olá'
+# Escreva seu código aqui
+
+# Verifique se uma palavra contém mais vogais ou mais consoantes. Imprima "Mais vogais" ou "Mais consoantes".
+palavra = 'comunicação'
+# Escreva seu código aqui
+
