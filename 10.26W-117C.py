@@ -1,4 +1,5 @@
 #Decisões e Expressôes Lógicas if/else
+from time import sleep
 nome = 'Henrique'
 for c in nome:
     # if c in ('e','i','u'): # As 3 formas estão corretas 
@@ -201,21 +202,48 @@ else:
     print('Há elementos não numéricos')
 
 # Verifique se um número é ímpar e imprima "Ímpar" ou "Não é ímpar".
-numero = 17
-# Escreva seu código aqui
+numero = 8
+if numero % 2 == 0:
+    print('Número par')
+else:
+    print('Número impar')
+    print('-'* 50) 
 
 # Crie uma expressão lógica que avalie se pelo menos uma das variáveis booleanas `x` ou `y` é verdadeira.
 x = False
 y = True
-# Escreva seu código aqui
-
+if x or y:
+    print('Pelo menos 1 variavel é verdadeira')
+else:
+    print('Nenhumas das variaveis são')
+print('-'* 50)
 # Peça para o usuário inserir três valores (um número, uma lista e uma string) e verifique se algum deles está vazio.
 numero = 5
 lista = []
 string = 'Olá'
-# Escreva seu código aqui
+print(f'Número {'vazio' if not numero else 'Não está vazio'}')
+print(f'Lista {' está vazio' if not lista else 'Não está vazio'}')
+print(f'String {'vazio' if not string else 'Não está vazio'}')
+sleep(1)
+print('-'* 50)
 
 # Verifique se uma palavra contém mais vogais ou mais consoantes. Imprima "Mais vogais" ou "Mais consoantes".
 palavra = 'comunicação'
-# Escreva seu código aqui
+vogais = 'aeiouáéíóúâêîôûãõ'
+quant_vogaias = 0
+quant_consuantes = 0
+for letra in palavra:
+    if letra.lower() in vogais:
+        quant_vogaias += 1
+    elif letra.isalpha():
+        quant_consuantes +=1
+
+if quant_vogaias > quant_consuantes:
+    sleep(2)
+    print('Existem mas vogais do que consuantes')
+else:
+    sleep(2)
+    print('Exixte mas consoantes do que vogais')
+        
+        
 

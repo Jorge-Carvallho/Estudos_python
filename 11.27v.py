@@ -1,5 +1,6 @@
 #Atribuições
 # 
+from time import sleep
 # row = 'Henrique', 'Noterói', 22.9, 43.1
 
 # def f(t):# função f com valor de t atrabuido a variavel row fora da função chamando
@@ -89,8 +90,152 @@ print(list(resultados))
       #ou
 for tupla in dados:
     print(formatar_tupla(tupla))
+print('-'* 70)
     
-  
-  
+'''--------------------------------------------Revisão------------------------------------'''
+# Exercícios:
 
-      
+# Crie uma lista de tuplas onde cada tupla contém o nome de uma pessoa, o país onde mora, a cidade onde nasceu e a sua idade. Desempacote as tuplas para exibir o nome e a idade de cada pessoa.
+lista_tupla = [('Mirian','Brasil','Rio de Janeiro',32),
+               ('Carlos','brasil', 'São Paulo', 22),
+               ('Edi','Espanha','Madri',35)]
+
+for nome,_,_,idade in lista_tupla: # aqui o exercício foi resolvido com uso de For 
+    # sleep(0.8)
+    print(nome, idade)
+#-------- -------- ------ -------
+# def l(f):
+#     nome,*_,idade = f
+#     sleep(0.8)
+#     print(nome,idade)
+
+# if __name__ == '__main__': # aqui o exercício foi resolvido com uso de funcões
+    # l(lista_tupla[0])
+    # l(lista_tupla[1])
+    # l(lista_tupla[2])
+print('-' * 60)  
+
+    
+
+     
+    
+# Dada a lista de tuplas abaixo, desempacote apenas o primeiro valor e o último, ignorando os intermediários com o underscore:
+pessoas = [('Lucas', 'Brasil', 'Recife', 30), 
+           ('Juliana', 'Portugal', 'Lisboa', 25)]
+# def l(pess):
+#     nome,*_,idade = pess   #resolvido com função
+#     print(nome,idade)
+
+# l(pessoas[0])
+# l(pessoas[1])
+
+for nome,*_, idade in pessoas: # resolvido em FOR
+    print(nome,idade,)
+print('-' * 60)
+    
+
+# Escreva uma função que receba uma tupla contendo quatro elementos: Estado(), cidade, temperatura e umidade. Desempacote a tupla e retorne uma string formatada com o estado() e a cidade, ignorando os valores numéricos.
+previsao_tempo = [('Amazonas','Capimirim', 27, 31.2),
+                  ('Pará','Aven', 25, 31.1),
+                  ('Bahia','Salvador',29, 29.9)]
+def prev(t):
+    estado,cidade,*_ = t
+    # sleep(0.9)
+    return f'O estado é {estado}, e a cidade é {cidade}' # ou return print(f'O estado é {estado}, e a cidade é {cidade}')
+
+for t in previsao_tempo:
+    print(prev(t))
+    # ou --> da forma abaixo
+# prev(previsao_tempo[0])
+# prev(previsao_tempo[1])
+# prev( previsao_tempo[2])
+print('-'* 60)
+
+# Use o operador * e o underscore para capturar o primeiro valor de cada tupla e todos os valores intermediários, ignorando o último, e depois exiba os valores intermediários como uma lista.
+def prev(t):
+    estado,*intermediarios = t
+    intermediarios = intermediarios[:-1]
+    # sleep(0.9)
+    return print(intermediarios)
+
+prev(previsao_tempo[0])
+prev(previsao_tempo[1])
+prev(previsao_tempo[2])
+print('-'* 60)
+
+
+
+# Modifique o seguinte código para que a variável valores_intermediarios capture apenas os dois últimos valores da tupla usando o underscore para ignorar o primeiro valor:
+dados = [('Ana', 'São Paulo', 23.5, 46.6), 
+         ('Carlos', 'Rio de Janeiro', 22.9, 43.2),
+         ('Amazonas','Capimirim', 27, 31.2)]
+    
+def v(i):
+    primeiros_valores, *intermediarios = i
+    intermediarios = intermediarios[1:]
+    # sleep(0.9)
+    # return intermediarios 
+    return print(intermediarios)
+
+
+# for item in dados:
+#     sleep(0.9)
+#     print(v(item))                                             # esse exercício foi resolvido de 3 formas diferentes
+    
+    # ou 
+ 
+v(dados[0])
+v(dados[1])
+v(dados[2])
+print('-'* 60)
+
+    # ou
+    
+def v(i):
+    _,_,valor1,valor2 = i
+    # sleep(0.9)
+    print([valor1, valor2])
+
+v(dados[0])
+v(dados[1])
+v(dados[2])
+print('-'* 60)
+
+# Dada uma lista de tuplas onde cada tupla contém três elementos: nome, cidade e temperatura, crie uma função que desempacote apenas o nome e a temperatura, e retorne uma string formatada com essa informação.
+tempo = [('Ana', 'São Paulo', 23.5 ), 
+         ('Carlos', 'Rio de Janeiro', 22.9 ),
+         ('Amazonas','Capimirim', 27 )]
+def d(f):
+    nome,_,temperatura = f
+    sleep(0.9)
+    return f'O nome é {nome} e a temperatura é {temperatura}'
+
+print(d(tempo[0]))
+print(d(tempo[1]))
+print(d(tempo[2]))
+print('a cidade de cada um é\n')
+
+# Modifique o código acima para exibir apenas o segundo valor de cada tupla, ignorando os demais com o underscore:
+def d(f):
+    _,cidade,_ = f
+    sleep(0.9)
+    return f'---> {cidade}'
+
+
+print(d(tempo[0]))
+print(d(tempo[1]))
+print(d(tempo[2]))
+
+
+
+
+
+
+# Modifique o código abaixo para exibir apenas o segundo valor de cada tupla, ignorando os demais com o underscore:
+# cidades = [('São Paulo', 23.5, 46.6), ('Rio de Janeiro', 22.9, 43.2)]
+# Escreva uma função que receba uma lista de tuplas, onde cada tupla contém um nome, uma idade e uma cidade. A função deve desempacotar os valores, ignorar a cidade e retornar uma lista contendo apenas os nomes e idades.
+
+# Dada uma lista de tuplas, modifique o código abaixo para usar o underscore e capturar os dois primeiros valores da tupla, ignorando o último:
+
+# valores = [('Maria', 29, 100), ('João', 35, 200)]
+# Escreva um código que desempacote uma tupla contendo cinco elementos e use o operador * para capturar o segundo, terceiro e quarto elementos, ignorando o primeiro e o quinto.
