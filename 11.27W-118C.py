@@ -207,7 +207,7 @@ tempo = [('Ana', 'São Paulo', 23.5 ),
          ('Amazonas','Capimirim', 27 )]
 def d(f):
     nome,_,temperatura = f
-    sleep(0.9)
+    # sleep(0.9)
     return f'O nome é {nome} e a temperatura é {temperatura}'
 
 print(d(tempo[0]))
@@ -218,24 +218,79 @@ print('a cidade de cada um é\n')
 # Modifique o código acima para exibir apenas o segundo valor de cada tupla, ignorando os demais com o underscore:
 def d(f):
     _,cidade,_ = f
-    sleep(0.9)
+    # sleep(0.9)
     return f'---> {cidade}'
 
 
 print(d(tempo[0]))
 print(d(tempo[1]))
 print(d(tempo[2]))
-
-
-
-
-
-
+print('-'* 60)
 # Modifique o código abaixo para exibir apenas o segundo valor de cada tupla, ignorando os demais com o underscore:
-# cidades = [('São Paulo', 23.5, 46.6), ('Rio de Janeiro', 22.9, 43.2)]
+cidades = [('São Paulo', 23.5, 46.6),
+            ('Rio de Janeiro', 22.9, 43.2),
+            ('Forteleza',23.3, 52.1)]
+
+def c(m):
+    primeiro,segundo,*resto = m
+    # sleep(0.9)
+    return f'O segundo valor é {segundo}'
+# print(c(cidades[0]))
+# print(c(cidades[1]))
+# print(c(cidades[2]))
+
+for valor in cidades:
+    print(c(valor))
+    
+print('-'*60)
+
+
+
+
 # Escreva uma função que receba uma lista de tuplas, onde cada tupla contém um nome, uma idade e uma cidade. A função deve desempacotar os valores, ignorar a cidade e retornar uma lista contendo apenas os nomes e idades.
+lista_pessoas= [('Lucas',  30 , 'Recife'), 
+           ('Juliana', 40, 'Lisboa', ),
+           ('Marcos', 36, 'Salvador')]
+
+def des(m):
+    valor_nome,_,cidade = m
+    # sleep(0.9)
+    return f'O nome é {valor_nome},  a cidade é {cidade}'
+
+for dados in lista_pessoas:
+    print(des(dados))
+
+print('-'* 60)
 
 # Dada uma lista de tuplas, modifique o código abaixo para usar o underscore e capturar os dois primeiros valores da tupla, ignorando o último:
 
-# valores = [('Maria', 29, 100), ('João', 35, 200)]
+informacao = [('João', 'Brasil', 30, 'Engenheiro'),
+              ('Maria', 'Portugal', 25, 'Médica'),
+              ('Carlos', 'Espanha', 40, 'Professor'),
+              ('Ana', 'Itália', 35, 'Designer')]
+
+def infor(valor):
+    valor1, valor2,*_ = valor
+    # sleep(0.9)
+    return f'O primerio é o nome {valor1}, o segundo é o pais {valor2} '
+
+for dados in informacao:
+    print(infor(dados))
+
+print('-'* 60)
+
 # Escreva um código que desempacote uma tupla contendo cinco elementos e use o operador * para capturar o segundo, terceiro e quarto elementos, ignorando o primeiro e o quinto.
+dados_funcionarios = [('Lucas', 'Brasil', 'São Paulo', 28, 'Engenheiro'),
+                      ('Sofia', 'Argentina', 'Buenos Aires', 32, 'Arquiteta'),
+                      ('Miguel', 'Espanha', 'Madri', 26, 'Programador'),
+                      ('Camila', 'Chile', 'Santiago', 29, 'Advogada'),
+                      ('Leonardo', 'México', 'Cidade do México', 35, 'Professor')]
+
+def infor(dados):
+    valor1,*mostrar,valor5 = dados
+    sleep(0.9)
+    return f'Dados a mostrar são pais, cidade e idade que são {mostrar}'
+
+for mostrar in dados_funcionarios:
+    print(infor(mostrar))
+    
