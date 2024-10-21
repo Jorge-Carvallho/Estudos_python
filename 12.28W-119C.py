@@ -110,3 +110,66 @@ def informacoes(**kwargs):
         
         
 informacoes(nome= 'Ana', idade=30, cidade='Rio de Janeiro')
+print('-'* 60)
+
+
+#  Função com Parâmetros Opcionais
+# Crie uma função chamada dados_pessoais que aceite três parâmetros: nome, idade, e cidade, sendo que cidade tenha um valor padrão de "Desconhecida". A função deve retornar uma string no formato "Nome: [nome], Idade: [idade], Cidade: [cidade]".
+
+# def dados_pessoais(**kwargs):
+#     return f'Retornando {kwargs}'                 # errado 
+
+# print(dados_pessoais(nome= 'jorge', idade= '35', cidade= 'salvador'))
+
+            # ou
+            
+def dados_pessoais(nome='Desconhecido', idade='Desconhecida', cidade='Desconhecida'):
+    return f'Nome: {nome}, Idade: {idade}, {cidade}'
+
+
+print(dados_pessoais('Jorge', 35))
+print('-'* 60)
+
+
+
+
+# Teste com e sem o parâmetro cidade.
+# Função com *args
+# Escreva uma função chamada soma_numeros que aceite uma quantidade variável de números usando *args e retorne a soma de todos os números fornecidos.
+def soma_numeros(*args):
+    total = 0
+    
+    for numero in args:
+        total += numero
+        
+    return total
+
+print(soma_numeros(1,2,3,4))
+print(soma_numeros(22,33))
+
+
+
+# Teste a função com diferentes quantidades de números.
+#Função com **kwargs
+# Crie uma função chamada detalhes_produto que aceite um número variável de parâmetros nomeados usando **kwargs. A função deve exibir cada chave e valor do dicionário resultante, seguido da mensagem "Detalhes do produto:".
+
+# Combinação de *args e **kwargs
+# Escreva uma função chamada informacoes_completas que aceite três parâmetros obrigatórios nome, idade, cidade, e também permita passar parâmetros adicionais via *args e **kwargs. A função deve exibir o nome, idade, cidade, as informações adicionais e os parâmetros nomeados extras.
+
+# Função com Retorno Condicional
+# Crie uma função chamada maior_menor que receba dois números como parâmetros e retorne qual número é maior ou se são iguais.
+
+# Função com Operações
+# Escreva uma função chamada operacao que receba dois números e uma operação aritmética (como string: '+', '-', '*' ou '/') e retorne o resultado da operação entre os dois números. Use uma função anônima lambda dentro da função principal para realizar as operações.
+
+# Função com Ordenação
+# Crie uma função chamada ordena_strings que aceite uma quantidade variável de strings usando *args e retorne uma lista dessas strings ordenadas em ordem alfabética.
+
+# Função com Filtros
+# Escreva uma função chamada filtro_pessoas que aceite um número variável de parâmetros nomeados usando **kwargs. A função deve filtrar e exibir pessoas que têm idade maior que 18 anos.
+# Função com Contagem
+# Crie uma função chamada conta_vogais que aceite uma string como parâmetro e retorne a quantidade de vogais (a, e, i, o, u) que aparecem na string.
+
+# Função Recursiva
+# Escreva uma função recursiva chamada fatorial que receba um número como parâmetro e retorne o fatorial desse número.
+
