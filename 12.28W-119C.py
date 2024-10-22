@@ -2,7 +2,7 @@
 # def f(): # função sem argumento
 #     return 42
 # print(f())
-
+from time import sleep
 def f(a,b,c): # posso pasar valor default também commo c='quinto', e apagar parámetro c Abaixo
     return a,b,c # função com argumentos onde a ordens dos parametros seguem ordens dos argumentos
 
@@ -152,21 +152,97 @@ print(soma_numeros(22,33))
 # Teste a função com diferentes quantidades de números.
 #Função com **kwargs
 # Crie uma função chamada detalhes_produto que aceite um número variável de parâmetros nomeados usando **kwargs. A função deve exibir cada chave e valor do dicionário resultante, seguido da mensagem "Detalhes do produto:".
+def detalhes_produto(**kwargs):
+    for chave, valor in kwargs.items():
+        
+        print(f'Chave: {chave},  Valor: {valor}')
+    
+detalhes_produto(Arroz= 42, Melão=5.50, laranja=1.29)
+print('-'* 60)
+   
+
 
 # Combinação de *args e **kwargs
 # Escreva uma função chamada informacoes_completas que aceite três parâmetros obrigatórios nome, idade, cidade, e também permita passar parâmetros adicionais via *args e **kwargs. A função deve exibir o nome, idade, cidade, as informações adicionais e os parâmetros nomeados extras.
 
+def informacoes_completas(nome, idade, cidade,* args, **kwargs):
+    # sleep(0.9)
+    print(f'Nome {nome}')
+    print(f'Idade {idade}')
+    print(f'Cidade {cidade}')
+
+    if args:
+        print(f'Informaçoes adicionais (args) {args}')
+
+    if kwargs:
+        print(f'Parâmetros nomeados (extras) {kwargs}')
+
+informacoes_completas('Jorge',35,'Salvador', 'nenhuma informação', 'Nenhuma inforção01',  Animal='cahcorro', Lazer='Surf', Trabalho='motorista')
+print('-'* 60)
+
+
+
+
 # Função com Retorno Condicional
 # Crie uma função chamada maior_menor que receba dois números como parâmetros e retorne qual número é maior ou se são iguais.
+def maior_menor(numero1, numero2):
+    valor_1 = int(numero1)
+    valor_2 = int((numero2))
+    if valor_1 > valor_2:
+        return f'O valor 1ª que é, ({valor_1}) é maior que o valor 2ª que é ({valor_2})'
+    elif valor_2 > valor_1:
+        return f'O valor 2ª que é  ({valor_2}) é maior que o valor 1ª que é {valor_1}'
+    else:
+        return f'Os valor 1ª que é, ({valor_1}) e valor 2ª que é, ({valor_2}) são iguais'
+        
+print(maior_menor(2,4))
+print(maior_menor(6,8))
+print(maior_menor(6,6))
+        
+        
+        
 
 # Função com Operações
 # Escreva uma função chamada operacao que receba dois números e uma operação aritmética (como string: '+', '-', '*' ou '/') e retorne o resultado da operação entre os dois números. Use uma função anônima lambda dentro da função principal para realizar as operações.
 
+
+
+
+
+
 # Função com Ordenação
 # Crie uma função chamada ordena_strings que aceite uma quantidade variável de strings usando *args e retorne uma lista dessas strings ordenadas em ordem alfabética.
 
+def ordena_Strings(*args):
+    lista_ordenada = list(args)
+    lista_ordenada.sort()
+    return print(lista_ordenada)
+
+ordena_Strings('h','a','b','e')
+
+
 # Função com Filtros
 # Escreva uma função chamada filtro_pessoas que aceite um número variável de parâmetros nomeados usando **kwargs. A função deve filtrar e exibir pessoas que têm idade maior que 18 anos.
+def filtro_pessoas(**kwargs):
+    for nome, idade in kwargs.items():
+        try:
+            idade = int(idade)
+            if idade >= 18:
+                print(f'Nome é {nome},  a idade é {idade}')
+        
+        except ValueError:
+            print(f'Idade nao possivel converter {idade}')   
+
+       
+
+
+filtro_pessoas(evandro=33, Isa=18, carlos=16)
+filtro_pessoas(jorge=22, maria=17, pedro=25)
+print('-'* 60)
+
+
+
+
 # Função com Contagem
 # Crie uma função chamada conta_vogais que aceite uma string como parâmetro e retorne a quantidade de vogais (a, e, i, o, u) que aparecem na string.
 
