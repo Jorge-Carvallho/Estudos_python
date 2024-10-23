@@ -206,7 +206,7 @@ print(maior_menor(6,6))
 # Escreva uma função chamada operacao que receba dois números e uma operação aritmética (como string: '+', '-', '*' ou '/') e retorne o resultado da operação entre os dois números. Use uma função anônima lambda dentro da função principal para realizar as operações.
 
 
-
+                    # falta resolver
 
 
 
@@ -245,7 +245,78 @@ print('-'* 60)
 
 # Função com Contagem
 # Crie uma função chamada conta_vogais que aceite uma string como parâmetro e retorne a quantidade de vogais (a, e, i, o, u) que aparecem na string.
+texto = 'inconstitucionalissimamente'
+def conta_vogais(palavra):
+    vogais = 0
+    for letra in palavra:
+        if letra.lower() in ('aeiou'):
+            vogais += 1 
+    return vogais
+        
+        
+print(conta_vogais(texto))
 
 # Função Recursiva
 # Escreva uma função recursiva chamada fatorial que receba um número como parâmetro e retorne o fatorial desse número.
 
+def fatorial(valor):
+    if valor == 0 or valor == 1:
+        return 1
+    else:
+        return valor * fatorial(valor -1)
+    
+print(fatorial(5))
+print('-'* 60)
+
+# Soma de Dois Números
+# Crie uma função chamada soma que aceite dois números como parâmetros e retorne a soma deles.
+def soma(valor1,valor2):
+    resultado = valor1 + valor2 
+    return f'A soma de {valor1} mais {valor2} é: {resultado}'
+
+
+print(soma(1,2))
+
+
+
+
+
+
+# Verificar Número Par
+# Crie uma função chamada eh_par que aceite um número como parâmetro e retorne True se o número for par e False caso contrário.
+def sera_que_e_par(numero):
+    if numero % 2 == 0:
+        print('Numero par ---> True')
+    else:
+        print('Numero impar ---> False')
+        
+        
+        
+sera_que_e_par(56)
+sera_que_e_par(55)
+sera_que_e_par(1)
+print('-'* 60)
+
+
+# Calcular Fatorial
+# Crie uma função chamada fatorial que calcule o fatorial de um número. Lembre-se que o fatorial de 0 e 1 é 1.
+def fatorial1(valor):
+    if valor == 0 or valor == 1:
+        return 1 
+    else:
+        return valor * fatorial(valor -1)
+        
+    
+    
+print(fatorial(5))
+
+
+
+
+
+# Inverter uma String
+
+# Crie uma função chamada inverter_string que aceite uma string como parâmetro e retorne a string invertida.
+# Contar Vogais em uma String
+
+# Crie uma função chamada contar_vogais que aceite uma string e conte quantas vogais (a, e, i, o, u) estão presentes.
