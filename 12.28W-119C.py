@@ -206,7 +206,7 @@ print(maior_menor(6,6))
 # Escreva uma função chamada operacao que receba dois números e uma operação aritmética (como string: '+', '-', '*' ou '/') e retorne o resultado da operação entre os dois números. Use uma função anônima lambda dentro da função principal para realizar as operações.
 
 
-
+                    # falta resolver
 
 
 
@@ -245,7 +245,149 @@ print('-'* 60)
 
 # Função com Contagem
 # Crie uma função chamada conta_vogais que aceite uma string como parâmetro e retorne a quantidade de vogais (a, e, i, o, u) que aparecem na string.
+texto = 'inconstitucionalissimamente'
+def conta_vogais(palavra):
+    vogais = 0
+    for letra in palavra:
+        if letra.lower() in ('aeiou'):
+            vogais += 1 
+    return vogais
+        
+        
+print(conta_vogais(texto))
 
 # Função Recursiva
 # Escreva uma função recursiva chamada fatorial que receba um número como parâmetro e retorne o fatorial desse número.
 
+def fatorial(valor):
+    if valor == 0 or valor == 1:
+        return 1
+    else:
+        return valor * fatorial(valor -1)
+    
+print(fatorial(5))
+print('-'* 60)
+
+# Soma de Dois Números
+# Crie uma função chamada soma que aceite dois números como parâmetros e retorne a soma deles.
+def soma(valor1,valor2):
+    resultado = valor1 + valor2 
+    return f'A soma de {valor1} mais {valor2} é: {resultado}'
+
+
+print(soma(1,2))
+print('-'* 60)
+
+
+
+
+
+# Verificar Número Par
+# Crie uma função chamada eh_par que aceite um número como parâmetro e retorne True se o número for par e False caso contrário.
+def sera_que_e_par(numero):
+    if numero % 2 == 0:
+        print('Numero par ---> True')
+    else:
+        print('Numero impar ---> False')
+        
+        
+        
+sera_que_e_par(56)
+sera_que_e_par(55)
+sera_que_e_par(1)
+print('-'* 60)
+
+
+# Calcular Fatorial
+# Crie uma função chamada fatorial que calcule o fatorial de um número. Lembre-se que o fatorial de 0 e 1 é 1.
+def fatorial1(valor):
+    if valor == 0 or valor == 1:
+        return 1 
+    else:
+        return valor * fatorial(valor -1)
+        
+    
+    
+print(fatorial(5))
+print('-'* 60)
+
+
+# Inverter uma String
+# Crie uma função chamada inverter_string que aceite uma string como parâmetro e retorne a string invertida.
+def inverter_string(palavra):
+    palavra_invertida = palavra[::-1]
+    return f'A palvra é ({palavra}), e ela invertida  fica ({palavra_invertida})'
+
+print(inverter_string('elemento'))
+print(inverter_string('elegante'))
+print(inverter_string('doideira'))
+print('-'*60)
+
+
+# Contar Vogais em uma String
+# Crie uma função chamada contar_vogais que aceite uma string e conte quantas vogais (a, e, i, o, u) estão presentes.
+def conta_vogal(palavra):
+    vogais = 0
+    for vogal in palavra:
+        if vogal.lower() in ('aeiou'):
+            vogais += 1
+    return vogais
+            
+            
+print(conta_vogal('elementarieain'))
+print(conta_vogal('doideira'))
+print(conta_vogal('elemento'))
+print('-'* 60)
+
+# Crie uma função que receba uma mensagem como parâmetro posicional e uma quantidade indefinida de números como *args. A função deve somar todos os números e exibir a mensagem seguida do resultado.
+def informando_soma(mensagem, *args):
+    resultado = sum(args)
+    return f'{mensagem} e a soma é {resultado}'    # usando sum() ---> built-in function
+
+
+print(informando_soma( 'Verificando mensagem', 2,3,4,5,6,7))
+
+        # ou sem o uso da ---> sum() built-in function
+
+
+def informando_soma(mensagem,*args):
+    resultado = 0 
+    for num in args:
+        resultado += num
+    
+    return f' {mensagem}, {resultado}'
+        
+
+print(informando_soma('vamos ver',2,2,2,2,2))
+
+print('-'* 60)
+
+
+
+
+# Faça uma função que receba uma saudação como parâmetro posicional e use *args para receber uma lista de nomes. Além disso, a função deve aceitar **kwargs para personalizar a saudação com um emoji e uma pontuação (ponto de exclamação, interrogação, etc.).
+
+# Exemplo de como funciona get ------------>
+# O método get() em um dicionário Python é usado para acessar o valor associado a uma chave específica. Se a chave não existir, get() permite que você forneça um valor padrão para retornar em vez de gerar um erro. ex: get('nome da chave','caso nao exixta retorna mensagem desse parâmetro')
+# pessoa = {
+#     'nome':'Jorge',
+#     'idade': 28,
+#     'cidade':'São Paulo'
+# }                              #Explicando get()
+# nome = pessoa.get('nome')
+# idade = pessoa.get('idade')
+# cidade = pessoa.get('cidade')
+# print(nome,idade,cidade)
+    
+def saudar(saudacao,*nomes,**kwargs):
+    emoji = kwargs.get('emoji', '')
+    pontuacao = kwargs.get('pontuacao', '!')
+
+    saudacoes = []
+
+    for nome in nomes:
+        saudacoes.append(f'{saudacao},{nome} {emoji}{pontuacao}')
+    return '\n'.join(saudacoes)
+
+print(saudar('Oĺa', 'Jorge', 'Erick', 'Val', emoji='😊', pontuacao='?!'))
+    
