@@ -198,13 +198,28 @@ def maior_menor(numero1, numero2):
 print(maior_menor(2,4))
 print(maior_menor(6,8))
 print(maior_menor(6,6))
-        
+print('-'* 60)
         
         
 
 # Função com Operações
 # Escreva uma função chamada operacao que receba dois números e uma operação aritmética (como string: '+', '-', '*' ou '/') e retorne o resultado da operação entre os dois números. Use uma função anônima lambda dentro da função principal para realizar as operações.
+def operacao(valor1,valor2, operador):
+    if operador == '+':
+        return (lambda x, y: x + y)(valor1, valor2)
+    elif operador == '-':
+        return (lambda x, y: x - y)(valor1, valor2)
+    elif operador == '*':
+        return (lambda x, y: x * y)(valor1, valor2)
+    elif operador == '/':
+        return (lambda x,y: x / y)(valor1, valor2)
+    else:
+        return 'Operação invalida'
 
+
+
+print(operacao(10,5, '+'))
+print('-'* 60)
 
                     # falta resolver
 
@@ -391,3 +406,16 @@ def saudar(saudacao,*nomes,**kwargs):
 
 print(saudar('Oĺa', 'Jorge', 'Erick', 'Val', emoji='😊', pontuacao='?!'))
     
+print('-'* 60)
+
+# Implemente uma função que receba nome e idade como parâmetros posicionais e **kwargs para adicionar informações extras como cidade, profissão, e hobbies. A função deve exibir todas essas informações formatadas.
+
+def exibindo_info(nome,idade,**kwargs):
+    print(f'Nome é {nome}')
+    print(f'Idade é {idade}')
+    
+    if kwargs:
+        print(f'Informaçoes extras {kwargs}')
+
+
+exibindo_info('jorge', 44, Cidade='Salvador', Profissão='Motorista',Hobbis='Surf')
