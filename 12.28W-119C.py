@@ -56,7 +56,7 @@ print(add.__code__.co_code)#gera os bytecode são as esturções de nivel mas ba
 print(add.__code__.co_name)#mostra o nnome da funcão
 print(add.__code__.co_varnames)# mostra os nome dos valores das variaveis internas das funções
 dis.dis(add)
-print('---------------------------------------------------------\n')
+print('------------------------------------------------------------EXERCÌCIOS----------------------------\n')
 
 def add(a, b):
     'Soma a com b'
@@ -76,11 +76,11 @@ def mul(a, b):
     return a * b
 
 print(calc(mul,2, 3))
-print('------------------------------------------------1------------------------------------')
+print('------------------------------------------------------------------------------------')
 
 # Exercícios
 
-# Exercício 1: Função com Parâmetros
+# Função com Parâmetros
 # Crie uma função chamada descricao que aceite três parâmetros: nome, idade e cidade. A função deve retornar uma string no formato "Nome: [nome], Idade: [idade], Cidade: [cidade]". Teste a função com diferentes valores para cada parâmetro.
 
 def descricao(nome,idade,cidade):
@@ -88,9 +88,9 @@ def descricao(nome,idade,cidade):
 
 print(descricao('Jorge', '34 anos', 'Salvador,Bahia'))
 print(descricao('Lais','33 anos', 'Salvador,Bahia'))
-print('------------------------------------------------2------------------------------------')
+print('------------------------------------------------------------------------------------')
 
-# Exercício 2: Função com *args
+# Função com *args
 # Escreva uma função chamada concatena que receba uma quantidade variável de strings usando *args e retorne uma única string que é a concatenação de todas as strings fornecidas. Teste a função com diferentes números de argumentos.
 
 def concatena(*args):
@@ -100,8 +100,8 @@ def concatena(*args):
 print(concatena('Olá ', ' ', 'Mundo'))
 print(concatena('Python', ' ', 'é ', 'uma linguagem', ' ', 'incrivel'))
 
-print('------------------------------------------------3-------------------------------------')
-# Exercício 3: Função com **kwargs
+print('-------------------------------------------------------------------------------------')
+# Função com **kwargs
 # Crie uma função chamada informacoes que aceite um número variável de parâmetros nomeados usando **kwargs. A função deve exibir cada chave e valor do dicionário resultante. Teste a função com diferentes pares chave-valor.
 
 def informacoes(**kwargs):
@@ -419,3 +419,53 @@ def exibindo_info(nome,idade,**kwargs):
 
 
 exibindo_info('jorge', 44, Cidade='Salvador', Profissão='Motorista',Hobbis='Surf')
+
+print('----------------Exercicios de função lambda-----------------------------')
+
+# Crie uma função lambda que receba um número e retorne o dobro dele.
+dobro = lambda x: x * 2
+    
+print(dobro(22))
+print('-'* 60)
+
+
+# Crie uma função lambda que receba um número e retorne (True ou positivo) se for positivo e (False ou negativo) se for negativo.
+positivo_negativo= lambda x: 'Positivo' if x >= 0 else 'Negativo'
+
+print(positivo_negativo(1))
+print('-'* 60)
+
+# Crie uma função lambda que receba um número e retorne True se for par e False se for ímpar.
+impar_par = lambda x: 'Número par' if x % 2 == 0 else ' Número impar'
+
+print(impar_par(-2))
+print('-'* 60)
+
+# Crie uma função lambda que receba um número e retorne o quadrado dele.
+quadrado = lambda x: x ** 2
+
+print(quadrado(10))
+print(quadrado(22))
+print('-'* 60)
+
+# Crie uma função lambda que receba duas strings e as concatene (junte) em uma única string.
+
+concac = lambda x,y: str(x) + str(y)
+
+print(concac('Jorge ', 'Miranda'))
+
+        # ou assim desta outra forma
+
+con = lambda a,b: ' '.join([a,b])
+
+print(con('jorge', 'Miranda'))
+print('-'* 60)
+import math
+# Crie uma função lambda que receba um número e retorne sua raiz quadrada.
+raiz_quadrada = lambda x: x ** 0.5
+print(raiz_quadrada(15))
+
+      # ou
+      
+raiz_quadrada = lambda x: math.sqrt(x)
+print(raiz_quadrada(15))
