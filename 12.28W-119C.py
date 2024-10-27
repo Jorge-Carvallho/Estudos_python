@@ -461,6 +461,8 @@ con = lambda a,b: ' '.join([a,b])
 print(con('jorge', 'Miranda'))
 print('-'* 60)
 import math
+
+
 # Crie uma função lambda que receba um número e retorne sua raiz quadrada.
 raiz_quadrada = lambda x: x ** 0.5
 print(raiz_quadrada(15))
@@ -469,3 +471,4 @@ print(raiz_quadrada(15))
       
 raiz_quadrada = lambda x: math.sqrt(x)
 print(raiz_quadrada(15))
+
