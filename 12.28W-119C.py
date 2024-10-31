@@ -472,3 +472,52 @@ print(raiz_quadrada(15))
 raiz_quadrada = lambda x: math.sqrt(x)
 print(raiz_quadrada(15))
 
+print('-'* 60)
+
+#Quadrado de um Número
+#Crie uma função lambda que receba um número e retorne seu quadrado.
+quadrado2 = lambda a: int(a) ** 2
+
+print(quadrado2(2))
+print('-'* 60)
+
+#Verificar Número Par
+#Crie uma função lambda que receba um número e retorne True se for par e False caso contrário.
+par_impar = lambda n: True if n % 2 == 0 else False
+
+print(par_impar(3))
+print('-'* 60)
+
+
+#Primeira Letra de uma Palavra
+#Crie uma função lambda que receba uma string e retorne a primeira letra da palavra.
+first_char = lambda l: l[0] if l else 'Digite a palavra'
+
+print(first_char(''))
+print('-'* 60)
+
+
+#Multiplicação por 10
+#Crie uma função lambda que receba um número e o multiplique por 10.
+multiplicador = lambda x: int(x) * 10
+
+print(multiplicador(10))
+print('-'* 60)
+
+#Concatenar Duas Strings
+#Crie uma função lambda que receba duas strings e as concatene com um espaço entre elas.
+concatenar  = lambda a, b: ''.join([str(a), str(b)])
+concatenar1 = lambda a, b: str(a) + str(b)
+print(concatenar('Hello',' word'))
+print(concatenar1('Hello',' word'))
+
+
+#Dobrar Todos os Números de uma Lista
+#Crie uma função lambda que receba uma lista de números e retorne uma nova lista com todos os números dobrados.
+lista = [1, 2, 3, 10]
+dobrando = lambda nums: list(map(lambda x: x * 2, nums))
+dobrando1 = list(map(lambda x: x * 2, lista ))
+
+
+print(dobrando(lista))
+print(dobrando1)

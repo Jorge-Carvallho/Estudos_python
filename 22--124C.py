@@ -29,13 +29,7 @@ def happy(number):
             box.append(n)
             n = sum_of_squares(n)
 
-        return n == 1
-    
-
-    
-    
-        
-            
+        return n ==   1    
             
     return False
         
