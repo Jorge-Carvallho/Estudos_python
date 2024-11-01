@@ -12,36 +12,16 @@
 # Perceber que o resultado entra em um ciclo (o número é infeliz).
 '''
 
-
-def sum_of_squares(number):
-    string = str(number)
-    digits = [int(char) ** 2  for char in string]
-    return sum(digits)
-    
-
-
 def happy(number):
-
-    box = []
-    if number in (1,10, 100, 97,130):
-        n = number
-        while n != 1 and n not in box:
-            box.append(n)
-            n = sum_of_squares(n)
-
-        return n ==   1    
-            
-    return False
-        
-   
-            
-   
-if __name__ == '__main__':
+    next_ = sum(int(char) ** 2 for char in str(number))
+    return number in (1,7) if number < 10 else happy(next_)
     
-    assert sum_of_squares(130) == 10
-    assert all([happy(n) for n in (1,10,100,130,97)])
-
-    assert not happy(4)
-   
-
-
+     
+     
+     
+assert all(happy(n) for n in (1,10,100,130,97))
+assert not all(happy(n) for n in (2,3,4,5,6,8,9))
+#    Esse teste importo a function happy e no console testo quais números são felizes
+# >>> from happy_functions import happy
+# >>> [(n,happy(n)) for n in range(1,10)]
+# [(1, True), (2, False), (3, False), (4, False), (5, False), (6, False), (7, True), (8, False), (9, False)]

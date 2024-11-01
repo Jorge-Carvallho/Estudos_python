@@ -521,3 +521,5 @@ dobrando1 = list(map(lambda x: x * 2, lista ))
 
 print(dobrando(lista))
 print(dobrando1)
+print('-'* 60)
+
