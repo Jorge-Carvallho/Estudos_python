@@ -65,6 +65,7 @@ print(numeros)
 for i, caracter in enumerate(string):
     print(f'O indice é --> {i} e caracter é -->  {caracter}')
     
+    
 print('-----------------------------------------Exercicio for------------------------------------\n')
 
 # Escreva um programa que exiba todos os números pares de 1 a 50 (inclusive). Use um loop for e a função range().
@@ -106,7 +107,7 @@ for i, fruta in enumerate(lista,start=1):
    
     print(i, fruta)
     
-print('------------------------------------------------------')
+print('------------------------Exercícios Frutas-------------------------------')
 
 # Escreva um programa que receba uma lista com as notas de 5 alunos e exiba cada nota junto com a posição do aluno na lista (começando do número 1).
 notas_uni =[2.4,4.6,10,5.7,7.7] 
@@ -116,8 +117,9 @@ for notas_uni, estud in enumerate(notas_uni, start=1):
 
 
 
-print('-----------------------------exercícios idéia-----------------------')
+print('------------------------exercícios idéia-----------------------')
+
 notas = [7.5, 8.0, 9.2, 6.7, 8.5]
 estudantes = ['Jorge','Fábio', 'Jéssica', 'Evandro', 'Juan']
 for notas, estudantes in zip(estudantes,notas):
-    print(estudantes, notas)
+    print( estudantes, notas)
