@@ -103,15 +103,15 @@ for match in ocorencia:
 
 
 
-# #ancoras de inicio e final de string  ^ e $ 
-# # ^ ancora de inicio de linha
-# findall('^.', 'abc\ndef\nghi') # retorna  o a pois ele nao percorre o \n informado acima, necessario usar uma flegue
-# resulta = ['a']
-# findall('^.', 'abc\ndef\nghi', re.MULTILINE) # retorna o primeiro de cada linha 
-# resultado = ['a', 'd','g']
-# # $ ancora de fim de linha
-# findall('.$', 'abc\ndef\nghi') 
-# #retorna o caracter final de cada linha
+#Crie uma função lambda que receba uma lista de números e retorne uma nova lista com todos os números dobrados.
+lista = [1, 2, 3, 10]
+dobrando = lambda nums: list(map(lambda x: x * 2, nums))
+dobrando1 = list(map(lambda x: x * 2, lista ))
+
+
+print(dobrando(lista))
+print(dobrando1)
+print('-'* 60)
 # findall('.$', 'abc\ndef\ncvg',re.MULTILINE)
 # resultado = ['c', 'f','g']
 # #retorna o caracter finald e cada linha percorrendo as linhas do \n

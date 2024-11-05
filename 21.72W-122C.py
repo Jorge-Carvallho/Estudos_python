@@ -246,7 +246,7 @@ class FizzbuzzTest(unittest.TestCase):
         self.assertEqual(robot(20),'buzz')
         
     def test_say_buzz_when_15(self):
-        self.assertEqual(robot(15),'fizzbuzz')
+        self.assertEqual(robot(15),'fizzbuz')
 
     def test_say_buzz_when_30(self):
         self.assertEqual(robot(30),'fizzbuzz')
