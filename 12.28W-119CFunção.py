@@ -549,42 +549,91 @@ print('--------------------------------------------------------Exibir detalhes--
 # Exibindo Detalhes de um Produto
 # Crie uma função exibir_detalhes que receba o nome e o preço de um produto como parâmetros obrigatórios e use **kwargs para adicionar informações extras, como categoria, marca e estoque. A função deve exibir todas as informações de forma organizada.
 def exibir_detalhes(nome,preco,**kwargs):
-    print(f'Nome é {nome} e préço é {preco}')
+    print(f'Nome é {nome} e preço é {preco}')
    
     if kwargs:
         print(f'Informações extras {kwargs}')
         
         
 
-exibir_detalhes('jorge', 44, Categoria='portuario', Marca='SSV', Estoque=200)
+exibir_detalhes('jorge', 44, Categoria='portuário', Marca='SSV', Estoque=200)
+print('-------------------------Exercício triplo de um número----------------------------')
     
 
-
-
-# Exercícios com Funções Lambda
 # Triplo de um Número
 # Crie uma função lambda que receba um número e retorne o triplo dele.
+triplo = lambda x: int(x) * 3
+
+print(triplo(3))
+print('---------------Verificar Número negativo-----------------------------')
+
 
 # Verificar Número Negativo
 # Crie uma função lambda que receba um número e retorne "Negativo" se for negativo, "Positivo" se for positivo, ou "Zero" se for zero.
+verificador = lambda x: 'Negativo' if x< 0 else ('Zero' if x ==0 else 'positivo')
+
+print(verificador(-5))
+print(verificador(10))
+print(verificador(0))
+print('-------------------------------Verificar Número impar--------------------------------')
+
 
 # Verificar Número Ímpar
 # Crie uma função lambda que receba um número e retorne True se for ímpar e False se for par.
+verificar = lambda x: 'Número impar --> True' if x % 2 == 1 else 'Número par --> False'
+print(verificar(1))
+print(verificar(2))
+print(verificar(3))
+print(verificar(4))
+print('-------------------------------Calcular o cubo de um número--------------------------------')
+
 
 # Calcular o Cubo de um Número
 # Crie uma função lambda que receba um número e retorne o cubo dele.
+calcular_cubo = lambda x: x**3
+
+print(calcular_cubo(3))
+print(calcular_cubo(2))
+print(calcular_cubo(4))
+print('---------------------------------Concatenar Três Strings')
 
 # Concatenar Três Strings
 # Crie uma função lambda que receba três strings e as junte em uma única string com um espaço entre cada palavra.
+concatenar_strings = lambda x, y, z: x + ' ' + y + ' ' + z
+
+print(concatenar_strings('óla', 'Jorge','Carvalho'))
+print(concatenar_strings('Esta', 'noite','vai chover'))
+print('------------------------------Calcular a Raiz Cúbica---------------------------')
+
 
 # Calcular a Raiz Cúbica
 # Crie uma função lambda que receba um número e retorne a raiz cúbica dele.
+calcular_raiz_cúbica = lambda x:  x **(1/3)
+print(calcular_raiz_cúbica(2))
+print('-------------------------Verificar strings com mais de 5 caracteres---------------------')
 
 # Verificar String com Mais de 5 Caracteres
 # Crie uma função lambda que receba uma string e retorne True se a string tiver mais de 5 caracteres e False caso contrário.
+verificar_quant_caracter = lambda x: 'Mais de 5 caracteres --> True' if len(x) > 5 else 'Menos de 5 caracteres --> False'
+
+print(verificar_quant_caracter('Elemento'))
+print(verificar_quant_caracter('Osvaldo'))
+print(verificar_quant_caracter('zero'))
+print('--------------------------------------Última Letra------------------------------------')
 
 # Última Letra de uma Palavra
 # Crie uma função lambda que receba uma string e retorne a última letra. Se a string estiver vazia, retorne "Digite uma palavra".
+
+ultima_letra = lambda x: x[-1]if x else 'Digite uma palavra'
+
+palavra = input('Digite uma palavra ')
+print(ultima_letra(palavra))
+# print(ultima_letra('ferinha'))
+# print(ultima_letra(palavra))
+# print(ultima_letra(palavra))
+
+
+
 
 # Multiplicação por 5
 # Crie uma função lambda que receba um número e o multiplique por 5.
