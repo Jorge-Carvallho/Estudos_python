@@ -41,3 +41,6 @@ def robot(pos):
 
 if __name__ == '__main__':
     assert robot(1) == '1'
+    
+    
+    
