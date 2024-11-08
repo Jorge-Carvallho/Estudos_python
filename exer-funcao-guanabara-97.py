@@ -13,3 +13,4 @@ def escreva():
     
 escreva()
 msg()
+
