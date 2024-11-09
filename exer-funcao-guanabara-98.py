@@ -14,7 +14,7 @@ def contador(i,f,p):
     if p == 0:
         p = 1
     elif p < 0:
-        p = abs(p)
+        p = abs(p)   #Função abs() retorna valor positivo ex. abs(-5) = 5 
         
     resultado = []
 
@@ -22,6 +22,7 @@ def contador(i,f,p):
         while i <= f:
             resultado.append(i)
             i += p
+            
     else:
         while i >= f:
             resultado.append(i)
@@ -34,6 +35,8 @@ def contador(i,f,p):
 assert contador(1, 10, 1) == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 assert contador(1,5,1) == [1,2,3,4,5]
 assert contador(10,50,10) == [10,20,30,40,50]
+
+assert contador(50,10,-10)
     
 
 # --------------------Já resolvido sem assert---------------------
