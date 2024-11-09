@@ -4,45 +4,70 @@
 # a)De 1 até 10, de 1 em 1
 # b)De 10 até 0, de 2 em 2
 # c)Uma contagem personalizada
-# OBS: from time import sleep faz o efeito com sleep com  o tempo (sleep(1.0) ou sleep(0.5))
-# para ele mostrar resultado por resultado no tempo correto usar ,flush=True antes na execulção do programa
 
 
 from time import sleep
 def linha():
     print('-=-'* 20)
     
+def contador(i,f,p):
+    if p == 0:
+        p = 1
+    elif p < 0:
+        p = abs(p)
+        
+    resultado = []
+
+    if i < f:
+        while i <= f:
+            resultado.append(i)
+            i += p
+    else:
+        while i >= f:
+            resultado.append(i)
+            i -= p
+            
+            
+    return resultado
+        
+
+assert contador(1, 10, 1) == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+assert contador(1,5,1) == [1,2,3,4,5]
+assert contador(10,50,10) == [10,20,30,40,50]
     
 
-def contador(i,f,p):
-    print(f'Contagem de {i} até {f} de {p} em {p}')
-    cont = i
-    if i < f:
-        while cont <= f:
-            print(f'{cont}', end=' ',flush=True)
-            sleep(0.3)
-            cont += p 
-        print('Fim!')
-        linha()
-    else:
-        cont = i
-        while cont >= f:
-            print(f'{cont}',end=' ',flush=True)
-            sleep(0.3)
-            cont -= p
-        print('Fim!')
+# --------------------Já resolvido sem assert---------------------
+
+# def contador(i,f,p):
+#     print(f'Contagem de {i} até {f} de {p} em {p}')
+#     if p < 0:
+#         p*= -1
+#     if p == 0:
+#         p = 1
+#     cont = i
+#     if i < f:
+#         while cont <= f:
+#             print(f'{cont}', end=' ',flush=True)
+#             sleep(0.3)
+#             cont += p 
+#         print('Fim!')
+#         linha()
+#     else:
+#         cont = i
+#         while cont >= f:
+#             print(f'{cont}',end=' ',flush=True)
+#             sleep(0.3)
+#             cont -= p
+#         print('Fim!')
     
+
     
-    
-    
-    
-    
-linha()
-contador(10,100,10)
-contador(100,10,10)
-linha()
-print('Agora é sua vez depersonalizar a contagem')
-init = int(input('Inicio: '))
-fim = int(input('Fim:    '))
-pas = int(input('Passo:  '))
-contador(init,fim,pas)
+# linha()
+# contador(10,100,10)
+# contador(100,10,10)
+# linha()
+# print('Agora é sua vez de personalizar a contagem')
+# init = int(input('Inicio: '))
+# fim = int(input('Fim:    '))
+# pas = int(input('Passo:  '))
+# contador(init,fim,pas)
