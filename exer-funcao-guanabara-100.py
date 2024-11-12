@@ -6,32 +6,32 @@ vai mostrar a soma entre todos os valores Pares sorteados pela função anterios
 '''
 
 
-import random
-numeros = [1,2,4,3]
+# import random
+# numeros = [1,2,4,3]
 
 
-sorteia = lambda lista:  random.choices(lista,k=5)
-        #recebe uma lista e sorteia 5 números que é k=5
+# sorteia = lambda lista:  random.choices(lista,k=5)
+#         #recebe uma lista e sorteia 5 números que é k=5
 
-valores_sorteados = sorteia(numeros)
-print(f'Números sorteados foi --> {valores_sorteados}')
-        # os valores sorteados vinheram dos números 
-        # sorteados do sorteia passando a lista1
-
-
-soma_par = lambda valores_sorteados: sum(valor for valor in valores_sorteados if valor % 2 == 0)
-        # recebe os valores sorteados, a função sum() ela calcula todos os elementos iteraveis
-        # para cada valor de valores_sorteados se valor for par ele é somado
+# valores_sorteados = sorteia(numeros)
+# print(f'Números sorteados foi --> {valores_sorteados}')
+#         # os valores sorteados vinheram dos números 
+#         # sorteados do sorteia passando a lista1
 
 
-somar_pares = soma_par(valores_sorteados)
-print(f'Soma dos números sorteados foi --> {somar_pares}')
+# soma_par = lambda valores_sorteados: sum(valor for valor in valores_sorteados if valor % 2 == 0)
+#         # recebe os valores sorteados, a função sum() ela calcula todos os elementos iteraveis
+#         # para cada valor de valores_sorteados se valor for par ele é somado
+
+
+# somar_pares = soma_par(valores_sorteados)
+# print(f'Soma dos números sorteados foi --> {somar_pares}')
 
 
 
-assert soma_par([2]) == 2
-assert soma_par([4]) == 4
-assert soma_par([2,4]) == 6
+# assert soma_par([2]) == 2
+# assert soma_par([4]) == 4
+# assert soma_par([2,4]) == 6
 
 
 
@@ -65,7 +65,34 @@ assert soma_par([2,4]) == 6
 # somar_pares = soma_par(sorteia_numero)
 # print(f'Soma dos números sorteados foi --> {somar_pares}')
 
+                #ou resolução do professor
 
+from random import randint
+from time import sleep
+
+
+def sorteia(lista):
+        print('Sorteando 5 ǹumeros da lista entre 1 e 10 ---> ', end='')
+        for cont in range(0, 5):
+                n = randint(1, 10)
+                lista.append(n)
+                print(f'{n}', end=' ', flush=True)
+                sleep(0.3)
+        print('Pronto!')
+        
+        
+def soma_par(lista):
+        soma = 0
+        for valor in lista:
+                if valor % 2 == 0:
+                        soma += valor
+        print(f'Os números sorteados foram {lista}\ne o resultado da soma dos números pares é--> {soma}')
+                
+        
+
+numero = []
+sorteia(numero)
+soma_par(numero)
 
 
 
