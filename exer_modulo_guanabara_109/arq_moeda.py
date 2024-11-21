@@ -26,30 +26,32 @@
 
      # ------------> sem o uso do decimal <-------------------#
 
-def aumentar(preço = 0,taxa = 0):
+def aumentar(preço = 0,taxa=0, formato=False):
     res = preço + (preço * taxa/100)
-    return res
+    return res if formato == False else converte_moeda(res)
 
 
-def diminuir(preço = 0, taxa = 0):
+def diminuir(preço=0, taxa=0, formato=False):
     res = preço - (preço * taxa/100)
-    return res
+    return res if not formato else converte_moeda(res)
 
 
-def dobro(preço = 0):
+def dobro(preço=0,formato=False):
     res = preço * 2
-    return res
+    return res if not formato else converte_moeda(res)
 
 
-def metade(preço = 0):
+def metade(preço=0,formato=False):
     res = preço / 2
-    return res
+    return res if not formato else converte_moeda(res)
 
 
-def converte_moeda(preço = 0, moeda = 'R$'):
+def converte_moeda(preço=0, moeda='R$'):
     return f'{moeda}{preço:.2f}'.replace('.',',')
 
 
-
-
+# A função converte_moeda() faz tarsforma o número float que vem com padrão o ponto tasformando em virgula como mostra no metodo acima replace
+# que ---> .replace('.',',')
+# Então foi criado um 3 argumento formato=False que caso o formate seja True chama a expreção 
+# --> res de resposta if not formato else chama a função converte_moeda(já como res de resposta de returno)
 
