@@ -8,13 +8,13 @@
 # from arq_moeda import metade, dobro etc.. assim so importa o que é nescesario
 # ou import arq_moeda que importa todo o módulo
 
-from exer_modulo_guanabara_109 import arq_moeda
+import arq_moeda
 
 # pre = float(input('Digite um preço: R$'))
-pre = 100
-print(f' A metade do R${arq_moeda.converte_moeda(pre)} é R${arq_moeda.converte_moeda(arq_moeda.metade(pre))}')
-print(f' O dobro de R${arq_moeda.converte_moeda(pre)} é R${arq_moeda.converte_moeda(arq_moeda.dobro(pre))}')
-print(f' Aumentando 10% em cima de R${arq_moeda.converte_moeda(pre)} temos R${arq_moeda.converte_moeda(arq_moeda.aumentar(pre,10))}')
-print(f' Reduzindo 20% em cima de R${arq_moeda.converte_moeda(pre)} temos R${arq_moeda.converte_moeda(arq_moeda.diminuir(pre,20))}')
+pre = 195.50
+print(f' A metade do R${arq_moeda.converte_moeda(pre)} é R${arq_moeda.metade(pre,True)}')
+print(f' O dobro de R${arq_moeda.converte_moeda(pre)} é R${arq_moeda.dobro(pre, True)}')
+print(f' Aumentando 10% em cima de R${arq_moeda.converte_moeda(pre)} temos R${arq_moeda.aumentar(pre,10,True)}')
+print(f' Reduzindo 20% em cima de R${arq_moeda.converte_moeda(pre)} temos R${arq_moeda.diminuir(pre,20,True)}')
 
 
