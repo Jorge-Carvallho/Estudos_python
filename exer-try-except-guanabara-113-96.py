@@ -17,11 +17,21 @@ def leiaInt(msg):
             return n
         
 def leiaFloat(msg):
-    ...
-
-
-
+    while True:
+        try:
+            n = float(input(msg))
+        except(ValueError, TypeError) as e:
+            print(f'\33[31mError, Digite um número válido: --> {e.__class__}\033[m] ')
+            continue
+        except KeyboardInterrupt as e:
+            print(f'\033[31mUsuário preferio não digitar nenhum valor --> {e.__class__}')
+            return 0 
+        else:
+            return n
+        
+        
+        
 # Programa Principal 
 n1 = leiaInt('Digite um valor inteiro: ')
 n2 = leiaFloat('Digite um valor real')
-print(f'O valor inteirio foi {n1}, e ovalor real foi { {n2}}')
+print(f'O valor inteirio foi {n1}, e o valor real foi {n2}')
