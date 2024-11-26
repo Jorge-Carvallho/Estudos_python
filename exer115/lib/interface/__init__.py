@@ -1,3 +1,4 @@
+
 def leiaInt(msg):
     while True:
         try:
@@ -33,3 +34,61 @@ def menu(lista):
     print(linha())
     opc = leiaInt('\033[32mSua Opção: \033[m')
     return opc
+
+
+
+
+
+
+
+
+         #------------------------ teste----------------------------------- #
+
+# def leiaInt(msg):
+#     while True:
+#         try:
+#             n = int(input(msg))
+#         except (ValueError, TypeError) as e:
+#             print('ERROR, Digite um número válido')
+#             continue
+#         except KeyboardInterrupt as e:
+#             print('Usuário preferio não digitar nenhum valor')
+#             return 0 
+#         else:
+#             return n 
+        
+        
+# def linha():
+#     return '-'* 42
+
+
+# def cabeçalho(txt):
+#     print(linha())
+#     print(txt.center(42))
+#     print(linha())
+
+
+# def menu(lista):
+#     cabeçalho('Menu principal')
+#     c = 1
+#     for item in lista:
+#         print(f'{c} {item}')
+#         c +=1
+#     print(linha())
+#     opc = leiaInt('Sua opção: ')
+#     return opc
+
+
+# cabeçalho('SISTEMA DE')
+
+# while True:
+#     resposta = menu(['Ver pessoas cadastradas', 'Cadastrar nova pesoas', 'Sair do sistema'])
+#     if resposta == 1:
+#         cabeçalho('opcão 1')
+#     elif resposta == 2:
+#         cabeçalho('opcao 2')
+#     elif resposta == 3:
+#         cabeçalho('Saindo do sistema, até logo')
+#         break
+#     else:
+#         print('Digite uma opção válida')
