@@ -7,17 +7,29 @@ sys.path.append('/home/jorge/Documentos/wttd_aulas')
 # Adiciona o diretório '/home/jorge/Documentos/wttd_aulas' ao caminho de busca de pacotes do Python
 # (sys.path), permitindo que o Python encontre o pacote 'exer115'
 # mesmo que o script esteja sendo executado de outro diretório.
-
+import os
 from exer115.lib.interface import *
-from exer115.lib.arquivo import *
+from exer115.lib.arquivo import arquivoExiste
 from time import sleep
+# arq = os.path.abspath('exer115/cursoemvideo.txt')
+# print(f'Caminho absoluto do arquivo:{arq}')
+
+arq_absoluto = os.path.abspath('exer115/cursoemvideo.txt')
+print(f'Caminho absoluto do arquivo: {arq_absoluto}')
+print(f'Arquivo existe? {arquivoExiste(arq_absoluto)}')
+print('aqui')
 
 
-arq = 'cursoemvideo.txt'
-if arquivoExiste(arq):
+
+
+print(arquivoExiste('cursoemvideo.txt'))
+
+# # arq = 'cursoemvideo.txt'
+if arquivoExiste(arq_absoluto):
     print('Arquivo encontrado com sucesso!!')
 else:
     print('Arquivo não encontrado')
+    print('Caiu no bloco do else -->')
 
 
 cabeçalho('SISTEMA ARQUIVO v1.0')
