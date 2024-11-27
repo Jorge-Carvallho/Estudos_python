@@ -1,3 +1,7 @@
+#Crie um pequeno sistema modularizado que permita cadastrar pessoas pelo seu nome e idade em um arquivo de texto simples.
+# O sistema só vai ter 2 opçoẽs:cadastrar uma nova pessoa, e listar todas as pessoas cadastradas.
+
+
 import sys
 sys.path.append('/home/jorge/Documentos/wttd_aulas') 
 # Adiciona o diretório '/home/jorge/Documentos/wttd_aulas' ao caminho de busca de pacotes do Python
@@ -5,7 +9,15 @@ sys.path.append('/home/jorge/Documentos/wttd_aulas')
 # mesmo que o script esteja sendo executado de outro diretório.
 
 from exer115.lib.interface import *
+from exer115.lib.arquivo import *
 from time import sleep
+
+
+arq = 'cursoemvideo.txt'
+if arquivoExiste(arq):
+    print('Arquivo encontrado com sucesso!!')
+else:
+    print('Arquivo não encontrado')
 
 
 cabeçalho('SISTEMA ARQUIVO v1.0')
