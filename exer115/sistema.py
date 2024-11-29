@@ -9,7 +9,7 @@ sys.path.append('/home/jorge/Documentos/wttd_aulas')
 # mesmo que o script esteja sendo executado de outro diretório.
 import os
 from exer115.lib.interface import *
-from exer115.lib.arquivo import arquivoExiste, criarArquivo
+from exer115.lib.arquivo import arquivoExiste, criarArquivo,lerArquivo
 from time import sleep
 # import os  #retorna o caminho do arquivo
 # print(f'Diretório atual: {os.getcwd()}')
@@ -21,12 +21,13 @@ arq = os.path.abspath(nome_do_arquivo)#busca o caminho e guarda na variavel.
 #print(f'Caminho absoluto do arquivo:---> {arq}')#mostra o caminho encontrado
 # print(f'Arquivo existe? ---> {arquivoExiste(arq)}')#apenas um teste pra retorno do arquivo, retorna True or False
 # print(arq)
-if arquivoExiste(arq):
-    print('Arquivo encontrado com sucesso!!')
-else:
+if not arquivoExiste(arq):
     print('Arquivo não encontrado')
     # print('Caiu no bloco do else -->')
-    criarArquivo(os.path.basename(arq))
+    # criarArquivo(os.path.basename(arq))
+    criarArquivo(arq)
+    
+
     
 
 
@@ -35,7 +36,9 @@ cabeçalho('SISTEMA ARQUIVO v1.0')
 while True:
     resposta = menu(['Ver pessoas cadastadas', 'Cadastrar nova Pessoa', 'Sair do Sistema'])
     if resposta == 1:
-        cabeçalho('Opção 1')
+        # cabeçalho('Opção 1')
+        #Opção de listar o conteúdo de uma arquivo
+        lerArquivo(arq)
     elif resposta == 2:
         cabeçalho('Opção 2')
     elif resposta == 3:
@@ -43,7 +46,7 @@ while True:
         break
     else:
         print('\033[31mERRO! Digite uma opção válida! \033[m')
-    sleep(0.9)
+    # sleep(0.9)
 
 
 
