@@ -9,7 +9,7 @@ sys.path.append('/home/jorge/Documentos/wttd_aulas')
 # mesmo que o script esteja sendo executado de outro diretório.
 import os
 from exer115.lib.interface import *
-from exer115.lib.arquivo import arquivoExiste, criarArquivo,lerArquivo
+from exer115.lib.arquivo import *
 from time import sleep
 # import os  #retorna o caminho do arquivo
 # print(f'Diretório atual: {os.getcwd()}')
@@ -40,7 +40,10 @@ while True:
         #Opção de listar o conteúdo de uma arquivo
         lerArquivo(arq)
     elif resposta == 2:
-        cabeçalho('Opção 2')
+        cabeçalho('NOVO CADASTRO')
+        nome = str(input('Nome: '))
+        idade = leiaInt('Idade: ')
+        cadastrar(arq,nome,idade)
     elif resposta == 3:
         cabeçalho('Saindo do sistema... Até logo!')
         break

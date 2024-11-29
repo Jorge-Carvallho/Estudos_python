@@ -28,26 +28,34 @@ def lerArquivo(nome):
     try:
         a = open(nome, 'rt')
     except:
-        print('erro ao ler o arquivo')
+        print('Erro ao ler o arquivo')
     else:
-        cabeçalho('Pessoas cadastradas')
-        print(a.read())
+        cabeçalho('PESSOAS CADASTRADAS')
+        for linha in a:
+            dado = linha.split(';')
+            dado[1] = dado[1].replace('\n', '')
+            print(f'{dado[0]:<30}{dado[1]:>3} anos')
+    finally:
+        a.close()
+        
+def cadastrar(arq, nome='desconhecido', idade=0):
+    try:
+        a = open(arq, 'at')
+    except Exception as e:
+        print(f'Houve um erro cadastrando um usuário --> {e}')
+            
+    else:
+        try:
+            a.write(f'{nome};{idade}\n')
+        except Exception as e:
+            print(f'Houve um erro na hora de escrever os dados --> {e}')
+        else:
+            print(f'Novo registro de {nome} adicionado')
+            a.close    
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     
     
     # -------Teste do arquivo com rt = Texto, e rb = Binário-----------------
