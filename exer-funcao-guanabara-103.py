@@ -12,14 +12,16 @@ def ficha(nome='<desconhecido>',gols=0):
 
 
 
-print(ficha())
-ficha('Evandro', 5)
+#print(ficha())
+#ficha('Evandro', 5)
+#print(ficha('Miranda', 2))
       
       
 
 
 assert ficha() == f'O nome do jogador é <desconhecido> e marcou 0 gols.'
 assert ficha('Evandro', 5) == f'O nome do jogador é Evandro e marcou 5 gols.'
+assert ficha('Miranda', 2) == f'O nome do jogador é Miranda e marcou 2 gols.'
 
 
 

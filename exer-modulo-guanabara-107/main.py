@@ -8,7 +8,7 @@
 
 import moeda
 
-pre = float(input('Digite um preço: R$'))
+pre = float(input('Digite um preço: R$ '))
 print(f' A metade do R${pre} é R${moeda.metade(pre)}')
 print(f' O dobro de R${pre} é R${moeda.dobro(pre)}')
 print(f' Aumentando 10% em cima de R${pre} temos R${moeda.aumentar(pre,10)}')
@@ -16,3 +16,4 @@ print(f' Reduzindo 20% em cima de R${pre} temos R${moeda.diminuir(pre,20)}')
 
 
 
+                # ------>   este exercício foi completado no exer_modulo_108  <---------- #
