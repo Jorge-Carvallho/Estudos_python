@@ -1,4 +1,6 @@
 # from sistema import *
+from exer115.lib.interface import *
+import os
 
 def arquivoExiste(nome):
     # print(f'Verificando o arquivo: def----> {nome}')
@@ -19,8 +21,17 @@ def criarArquivo(nome):
     except:
         print('Houve um erro')
     else:
-        print(f'Arquivo {nome} criado com sucesso!')
+        print(f'Arquivo {os.path.basename(nome)} criado com sucesso!')
       
+      
+def lerArquivo(nome):
+    try:
+        a = open(nome, 'rt')
+    except:
+        print('erro ao ler o arquivo')
+    else:
+        cabeçalho('Pessoas cadastradas')
+        print(a.read())
     
     
     
