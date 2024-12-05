@@ -1,3 +1,7 @@
+# Exercício 32
+# Faca um programa que leia um ano qualuqer
+# e mostre se ele é bissexto
+
 import datetime
 
 num = int(input('Digite um ano ou 0 para verificar o ano atual: '))
@@ -14,4 +18,4 @@ else:
 
     
 
-    
+#        --------------ou---------------

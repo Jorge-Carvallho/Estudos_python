@@ -1,3 +1,11 @@
+# Exercício 31
+# Desenvolva um programa que pergunte a distância de uma viagem em km.
+# Calcule o preço da passagem,cobrando R$0.50 por km para viagem de até 200km,
+# e R$0.45 para viagem mais longas.
+
+
+
+
 distancia_viagem = int(input('Qual foi a distância da viagem: '))
 km_base = 200
 preco_base= 75.00
@@ -12,4 +20,8 @@ else:
     print(f'Você esta preste a começar uma viagem de {distancia_viagem:.1f}km')
     print(f'O preço de sua passagem será R${valor_passagem_atualizado:.2f}')
     print('-=-'* 20)
+    
+    
+    
+    
     
