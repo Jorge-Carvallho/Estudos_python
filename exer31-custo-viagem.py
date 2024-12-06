@@ -6,22 +6,40 @@
 
 
 
-distancia_viagem = int(input('Qual foi a distância da viagem: '))
-km_base = 200
-preco_base= 75.00
-preco_km_passado = 1.95
-valor_passagem_atualizado = ((distancia_viagem - km_base) * preco_km_passado) + preco_base
+# distancia_viagem = int(input('Qual foi a distância da viagem: '))
+# km_base = 200
+# preco_base= 75.00
+# preco_km_passado = 1.95
+# valor_passagem_atualizado = ((distancia_viagem - km_base) * preco_km_passado) + preco_base
 
-if distancia_viagem <= km_base:
-    print(f'Você esta preste a começar uma viagem {distancia_viagem:.1f}Km')
-    print(f'O valor da passagem foi R${preco_base:.2f}')
+# if distancia_viagem <= km_base:
+#     print(f'Você esta preste a começar uma viagem {distancia_viagem:.1f}Km')
+#     print(f'O valor da passagem foi R${preco_base:.2f}')
+# else:
+#     print('-=-'* 20)
+#     print(f'Você esta preste a começar uma viagem de {distancia_viagem:.1f}km')
+#     print(f'O preço de sua passagem será R${valor_passagem_atualizado:.2f}')
+#     print('-=-'* 20)
+    
+    
+    # ------------------------------resolução-------------------------------
+    
+    
+    
+distancia = float(input('Qual a distância de sua viagem? '))
+print(f'\nVocê estar preste  a fazer uma viagem de {distancia}Km. ')
+
+if distancia <= 200:
+    preco = distancia * 0.50
+
 else:
-    print('-=-'* 20)
-    print(f'Você esta preste a começar uma viagem de {distancia_viagem:.1f}km')
-    print(f'O preço de sua passagem será R${valor_passagem_atualizado:.2f}')
-    print('-=-'* 20)
+    preco = distancia * 0.45
+print(f'O preço de sua passagem custarar R${preco:.2f}')
+
+
+# --->usando operadoer ternário
     
-    
-    
+preco = distancia * 0.50 > 200 if distancia <= 200 else distancia * 0.45
+
     
     
