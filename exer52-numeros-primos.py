@@ -15,11 +15,11 @@
 
 # --------------------------------------resolução--------------------------------------
 
-
-num = int(input('Digite um número: '))
-for c in range(1,num+1):
-    if num % c == 0:
-        print('\033[34m',end='')
+cont = 0
+num =  int(input('Digite um número: '))
+for c in range(1,num+1):    # para cada número de 1 até o proprio número digitado
+    if num % c == 0: #se número fou divisivel pelo contador e o resultado é zero ele é divisivel
+        print('\033[34m', end='') # os números que forem divisiveis ele mostra azul
     else:
-        print('\033[m',end='')
-    print('{}'.format(c),end=' ')
+        print('\033[m', end='')# os números nao divisiveis mostra normal
+    print(c) # mostra o contador 
