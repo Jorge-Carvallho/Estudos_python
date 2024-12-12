@@ -1,3 +1,7 @@
+# Estrutura de repetição FOR (Variavel de Controle)
+
+
+
 # # loop segue em frente
 # for c in range(0,10):#mostrara de 0 ate 10
 #     print('Vamos la')  # dentro do for, de 0, 10 vai repetir 10 vezes
