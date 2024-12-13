@@ -8,7 +8,7 @@ import random
 from time import sleep
 num_maquina = random.randint(0,5)
 print('-=-'* 30)
-num_maquina = print('Vou pensar em um numero de 0 a 5. Tente adivinhar...')
+print('Vou pensar em um numero de 0 a 5. Tente adivinhar...')
 print('-=-'* 30)
 
 num_pensado = int(input('Em que número eu pensei: '))
