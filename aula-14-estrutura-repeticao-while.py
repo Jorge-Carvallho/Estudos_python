@@ -24,8 +24,20 @@
 # print('FIM')
 
 
-r = 'S'
-while r == 'S':
-    n = int(input('Digite um valor: '))
-    r = str(input('Quer continumar [S/n]: ')).upper()
-print('FIM')
+# r = 'S'
+# while r == 'S':
+#     n = int(input('Digite um valor: '))
+#     r = str(input('Quer continumar [S/n]: ')).upper()
+# print('FIM')
+
+n = 1
+par = impar = 0
+while n != 0:
+    n = int(input('Digite um numero: '))
+    if n % 2 == 0:
+        par += 1
+    else:
+        impar += 1
+        
+print(f'números pares {par}, e números impares {impar}')
+print('Acabou')
