@@ -9,8 +9,8 @@ print('='* 30)
 print(f'{"10 TERMOS DE UMA PA":^30}')
 print('='* 30)
 
-termo = int(input('Informe o primeiro termo: '))
-razao = int(input('Informe a RAZÂO: ')) 
+termo = int(input('Informe o primeiro termo: ')) # inicia desse valor
+razao = int(input('Informe a RAZÂO: '))         # passos a dar desse valor
 cont = 0
 print(termo, end=' --> ')
 for c in range(0,10):
