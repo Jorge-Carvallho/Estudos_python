@@ -1,3 +1,8 @@
+# Exercício 60
+# Faça um programa que leia um número qualquer e mostre o seu fatorial
+
+
+
 # print('Digite um número para')
 # n1 = int(input('Calcular o fatorial: '))
 
@@ -35,11 +40,12 @@
     
 # ---------------------teste---------------------------------------------    
     
-n = int(input('Digite um numero: '))
+n = int(input('Digite um número: '))
 c = n
 f =1
-while c > 1:
+while c > 0:
     print(c,end=' ')
+    
     f*=c
     c -= 1
-print(c,f)
+print(f)
