@@ -46,3 +46,18 @@ for c in range(0, 4):
     soma += n
     print(n)
 print(f' A soma dos números foram {soma}')
+from random import randint, choice,choices, sample
+
+# randint() é usado para classificar um único número inteiro em um intervalo.
+sorteia = randint(0,1) #--> retorna um número sorteado
+
+
+# choice() sorteia um único item aleatório de uma sequência.
+lista = [0,1,2,3,4,5,6]
+sorteia = choice(lista)
+
+
+# choices() permite classificar vários itens com possibilidade de reprodução .
+lista = [0,1,2,3,4,5,63,4,7,3,5]
+sorteia = choices(range(0,5),k=5)
+
