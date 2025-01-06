@@ -30,7 +30,7 @@
 # print(pessoas)
 # print('='*20)
 
-# #Adicionao um dicionário a uma lista
+# #Adicionao um dicionário a uma lista-----------------------
 # brasil = []
 
 # estado1 = {'uf':'Rio de Janeiro', 'sigla':'RJ'}
@@ -54,11 +54,11 @@ for c in range(0, 3):
 
 for e in brasil:
 #     for k, v in e.items():
-    
 #         print(f'O estado é {k} e a sigla é {v}')
-
 # print(brasil)
+    
         #  ou
+
     for v in e.values():
         print(v, end = ' ')
 print()
