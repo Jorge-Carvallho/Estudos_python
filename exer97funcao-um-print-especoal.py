@@ -17,3 +17,4 @@ def escreva(msg):
     print('-'* tam)
     
     
+escreva('Vamos para mas um dia de estudos')

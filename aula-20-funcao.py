@@ -34,10 +34,12 @@
 # soma(2,4)
 # ----------------------------------------------------------------------------------
 
-# def contador(*num):                  # * significa desempacotar, onde será passado varis parâmetros
-#     for valor in num:               #-----------------------> retorna uma tupla
-#         print(f'{valor}', end=' ')
-#     print('Fim!')
+def contador(*num):                  # * significa desempacotar, onde será passado varis parâmetros
+    for valor in num:               #-----------------------> retorna uma tupla
+        print(f'{valor}', end=' ')
+    print('Fim!')
+    
+
     
 # contador(2,3,5,67,7)
 # contador(22,2,22,4,5)
@@ -67,11 +69,11 @@
 # print(f'A lista dobrada é {valores} ')
 # -------------------------------------------------------------------------------------------
 
-def soma(*valores):
-    s = 0
-    for num in valores:
-        s += num
-    print(f' A soma dos valores {valores} é --> {s}')
+# def soma(*valores):
+#     s = 0
+#     for num in valores:
+#         s += num
+#     print(f' A soma dos valores {valores} é --> {s}')
 
 
-soma(2,3,5,3,5,3,2,)
+# soma(2,3,5,3,5,3,2,)
