@@ -12,9 +12,9 @@ def ficha(nome='<desconhecido>',gols=0):
 
 
 
-#print(ficha())
-#ficha('Evandro', 5)
-#print(ficha('Miranda', 2))
+print(ficha())
+ficha('Evandro', 5)
+print(ficha('Miranda', 2))
       
       
 

@@ -1,17 +1,17 @@
 #Dockstrings
-def contador(i,f,p):
-    """Faz uma contagem e mostra na tela:
-    -i : inicio da contagem
-    -f : fim da contagem
-    -p : passo da contagem
-    return: sem retorno/com impressão
-    """
-    print(f'De {i} até {f} de {p} em {p} resulta em, ',end=' ')
-    c = i
-    while c <=f:
-        print(c,end=' ')    
-        c +=p
-    print('Fim!')
+# def contador(i,f,p):
+#     """Faz uma contagem e mostra na tela:
+#     -i : inicio da contagem
+#     -f : fim da contagem
+#     -p : passo da contagem
+#     return: sem retorno/com impressão
+#     """
+#     print(f'De {i} até {f} de {p} em {p} resulta em, ',end=' ')
+#     c = i
+#     while c <=f:
+#         print(c,end=' ')    
+#         c +=p
+#     print('Fim!')
     
     
 # i = int(input('Inicio: '))
@@ -46,20 +46,20 @@ def contador(i,f,p):
 
 # ------------------------------------------------------------------------------------------------------------
 
-def teste(b):
-    a = 8
-    b += 4  #como (b) não tem definição a variável global de a passo pra (b) também copiada
-    c = 2
-    print(f'A dentro vale {a}')
-    print(f'A dentro vale {b}')                     
-    print(f'A dentro vale {c}')
+# def teste(b):
+#     a = 8
+#     b += 4  #como (b) não tem definição a variável global de a passo pra (b) também copiada
+#     c = 2
+#     print(f'A dentro vale {a}')
+#     print(f'A dentro vale {b}')                     
+#     print(f'A dentro vale {c}')
 
 
-a = 5 
-teste(a)
-print(f'a fora vale{a}')
+# a = 5 
+# teste(a)
+# print(f'a fora vale{a}')
 
-print('-------')
+# print('-------')
 # -------
 # usando variavel a como global
 
@@ -88,11 +88,43 @@ print('-------')
 
 # Retorno de valores
 
-def somar(a=3,b=4,c=2):
-    s = a+ b+ c
-    return s
+# def somar(a=3,b=4,c=2):
+#     s = a+ b+ c
+#     return s
 
-r1 = somar(2,1,5)
-r2 = somar(2,1)
-r3 = somar(2)
-print(f'Meus calculos deram {r1}, {r2}, {r3}')
+# r1 = somar(2,1,5)
+# r2 = somar(2,1)
+# r3 = somar(2)
+# print(f'Meus calculos deram {r1}, {r2}, {r3}')
+# -----------------------------------------------------------------------------------------
+
+# def fatorial(num=1):
+#     f = 1
+#     for c in range(num,0,-1):
+#         f*=c
+#     return f
+
+# # n = int(input('Digite um Número: '))
+# # print(fatorial(n))
+# # print(f'O fatorial de {n} é {fatorial(n)}')
+# # ------------ou-----------------
+
+# f1 = fatorial(5)
+# f2 = fatorial(7)
+# f3 = fatorial()
+
+# print(f'Os resultados são {f1}, {f2}, {f3}')
+# ----------------------------------------------------
+
+def par(n = 0):
+    if n% 2 == 0:
+        return True
+    return False
+    
+num = int(input('Digite um número: '))
+if par(num):
+    print('E par')
+else:
+    print('Não é par')
+
+
