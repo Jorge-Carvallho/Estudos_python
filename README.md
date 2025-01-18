@@ -1,4 +1,4 @@
-# Repositório de Exercícios de Python
+# Repositório 100 Exercícios de Python - Professor Guanabara
 
 ## Introdução
 
