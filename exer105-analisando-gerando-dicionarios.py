@@ -36,7 +36,7 @@ def notas(*n,situação=False):
 # Programa principal
 resp = notas(5.5, 2.5, 9, 8.5, situação=True)
 print(resp)
-help(notas)
+# help(notas)
 
 # -------------------------- Exercicio Teste ----------------------
 
@@ -69,4 +69,4 @@ def analisar_temperatura(*temp, situacao=False):
     return t
     
 resp = analisar_temperatura(30,20,29,24,situacao=True)
-print(resp)
+# print(resp)
