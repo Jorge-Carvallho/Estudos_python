@@ -1,3 +1,12 @@
+# Exercício 98
+# Faça um porgrama que tenha um afunçãochamada contador(),
+# que receba três parâmetros: início, fim e passo.
+# Seu programa tem que realizar três comtagens através da função criada
+#     a)De 1 até 10, de 1 em 1
+#     b)De 10 até 0, de 2 em 2
+#     c)Uma contagem personalizada
+
+
 from time import sleep
 
 def linha():

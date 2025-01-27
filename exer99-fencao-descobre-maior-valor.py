@@ -1,3 +1,9 @@
+# Exercício 99
+# Faça um porgrama que tenha uma função chamada maior(), que receba varios parâmetros
+# como valores inteiros.
+# Seu programa tem que analisar todos os valores e dizer qual deles é o maior
+
+
 def maior(*num):
     msg = '---> Não foi informado nunhum valor <---'
     cont = maior = 0
